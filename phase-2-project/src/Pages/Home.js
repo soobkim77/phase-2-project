@@ -1,14 +1,15 @@
 import GenreContainer from '../Containers/GenreContainer'
 import React, { Fragment, Component } from 'react'
 
+
 class Home extends Component {
     render(){
         return (
             <Fragment>
-                <GenreContainer List={this.props.fList} more={this.props.moreF}/>
+                <GenreContainer List={this.props.fList} more={this.props.moreF} click={this.props.click}/>
                 <br/>
                 <br/>
-                <GenreContainer List={this.props.nList} more={this.props.moreN}/>
+                <GenreContainer List={this.props.nList} more={this.props.moreN} click={this.props.click}/>
             </Fragment>
         )
     }

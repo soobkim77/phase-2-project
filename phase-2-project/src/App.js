@@ -1,7 +1,8 @@
 import LogIn from './components/LogIn'
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
-import Home from './Pages/Home'
+import {Route, Switch, Router} from 'react-router-dom';
+import Home from './Pages/Home';
+import BookInfo from './components/BookInfo'
 
 
 class App extends React.Component {
@@ -9,12 +10,16 @@ class App extends React.Component {
     fiction: [],
     nonF: [],
     currentF: 0,
-    currentN: 0
-
+    currentN: 0,
+    currentBook: []
   }
 
 
   //  APIkey = 'u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa'
+
+  bookInfo = (book) => {
+    this.setState({currentBook: book})
+  }
   
   fiveFBooks = () => {
     return this.state.fiction.slice(this.state.currentF, this.state.currentF+5)  
@@ -63,10 +68,16 @@ class App extends React.Component {
   render (){
   return (
     <div>
-      <LogIn />
-      <Home fiction={this.getFiction} fList={this.fiveFBooks()} nList={this.fiveNBooks()} moreF={this.moreFBooks} moreN={this.moreNBooks}/>
+      {/* <LogIn /> */}
+      
+      <Switch>
+        <Route exact path="/" render={() => <Home fiction={this.getFiction} fList={this.fiveFBooks()} nList={this.fiveNBooks()} moreF={this.moreFBooks} moreN={this.moreNBooks} click={this.bookInfo}/>}/>
+        <Route path="/book/:rank" render={() => {
+          return <BookInfo book={this.state.currentBook}/>}}
+          />
 
         <Route path="/login" component={LogIn}/>
+      </Switch>
     </div>
   )}
 }

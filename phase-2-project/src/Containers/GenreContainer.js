@@ -8,12 +8,12 @@ const GenreContainer = (props) => {
             <div className="ui 5 column grid">
                 <div className="ui centered cards">
                     {props.List.map(book => { 
-                    return <Book book={book} key={book.rank}/>
+                    return <Book book={book} key={book.rank} click={props.click}/>
                     })}
                 </div>           
             </div>
             <button onClick={props.more} className="moreButton">
-                                More Books!
+                More Books!
             </button>
         </div>
     )
