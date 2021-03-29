@@ -1,8 +1,7 @@
-import LogIn from './components/LogIn'
-import Register from './components/Register'
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import './login.css'
+import Validation from './pages/Validation';
 let APIkey = 'u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa'
 
 
@@ -51,47 +50,21 @@ class App extends React.Component {
   }
 
   render (){
-    console.log(this.state.user)
-  return (
-    <div className="root-container">
-      <div className="box-controller">
-       <div
-         className={"controller " + (this.state.isLoginOpen
-         ? "selected-controller"
-         : "")}
-         onClick={this.displayLogin}>
-         Login
-       </div>
-       <div
-         className={"controller " + (this.state.isRegisterOpen
-         ? "selected-controller"
-         : "")}
-         onClick={this.displayRegister}>
-         Register
-       </div>
-     </div>
-      
-      <div className="box-container">
-      {this.state.displayLogin && <LogIn 
-        user={this.state.user} 
-        handleUsernameChange={this.handleUsernameChange} 
-        handlePasswordChange={this.handlePasswordChange} 
-        handleLogin={(e) => this.validateUser(e)}
-        />}
-      {this.state.displayRegister && <Register 
-        user={this.state.user} 
-        handleLogin={(e) => this.createUser(e)}
-        handleUsernameChange={this.handleUsernameChange} 
-        handlePasswordChange={this.handlePasswordChange} 
-         />}
-     </div>
+    
+    return (
+      <Validation
+      user={this.state.user}
+      displayLoginBool={this.state.displayLogin}
+      displayRegisterBool={this.state.displayRegister}
+      displayRegister={this.displayRegister}
+      displayLogin={this.displayLogin}
+      handleUsernameChange={this.handleUsernameChange}
+      handlePasswordChange={this.handlePasswordChange}
+      createUser={this.createUser}
+      validateUser={this.validateUser}
 
-  
-
-
-        <Route path="/login" component={LogIn}/>
-    </div>
-  )}
+      />    
+    )}
 }
 
 export default App;
