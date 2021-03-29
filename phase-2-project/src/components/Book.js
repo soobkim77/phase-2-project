@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Image } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css'
 
 const Book = (props) => {
     return(
@@ -17,13 +16,9 @@ const Book = (props) => {
                 </Card.Description>
             </Card.Content>
             <Card.Content extra>
-            <Card.Meta>
-                    <span>{props.book.description}</span>
-                </Card.Meta>
+                <span>{props.book.description}</span>
             </Card.Content>
         </div>
-
-
     </div>
     )
 }

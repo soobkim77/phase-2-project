@@ -1,7 +1,7 @@
 import LogIn from './components/LogIn'
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import Home from './Containers/Home'
+import Home from './Pages/Home'
 
 
 class App extends React.Component {
