@@ -1,5 +1,6 @@
 import LogIn from './components/LogIn'
 import React from 'react';
+import {Route, Switch} from 'react-router-dom';
 
 
 class App extends React.Component {
@@ -13,7 +14,12 @@ class App extends React.Component {
 
   render (){
   return (
-    <LogIn/>
+    <div>
+      <LogIn />
+
+
+        <Route path="/login" component={LogIn}/>
+    </div>
   )}
 }
 
