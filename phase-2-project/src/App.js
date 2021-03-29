@@ -1,26 +1,35 @@
-import LogIn from './components/LogIn'
 import React from 'react';
+
 import {Route, Switch, Router} from 'react-router-dom';
 import Home from './Pages/Home';
 import BookInfo from './components/BookInfo'
+import './login.css'
+import Validation from './pages/Validation';
+import Home from './Pages/Home'
 
 
 class App extends React.Component {
-  state={
+   
+  state = {
     fiction: [],
     nonF: [],
     currentF: 0,
     currentN: 0,
-    currentBook: []
+    currentBook: [],
+    user: {
+      username: "",
+      password: ""
+    },
+    displayLogin: true,
+    displayRegister: false
   }
 
-
-  //  APIkey = 'u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa'
 
   bookInfo = (book) => {
     this.setState({currentBook: book})
   }
   
+
   fiveFBooks = () => {
     return this.state.fiction.slice(this.state.currentF, this.state.currentF+5)  
   }
@@ -65,9 +74,37 @@ class App extends React.Component {
     this.getNonFiction()
   }
 
+
+  displayRegister = () => {
+    this.setState({displayLogin: false, displayRegister: true})
+  }
+
+  displayLogin = () => {
+    this.setState({displayLogin: true, displayRegister: false})
+  }
+
+  handleUsernameChange = (e) => {
+    this.setState({user: {...this.state.user, username: e.target.value}})
+  }
+
+  handlePasswordChange = (e) => {
+    this.setState({user: {...this.state.user, password: e.target.value}})
+  }
+
+  createUser = (e) => {
+    e.preventDefault()
+    console.log(e)
+  }
+  
+  validateUser = (e) => {
+    e.preventDefault()
+    console.log(e)
+  }
+
   render (){
-  return (
-    <div>
+    
+    return (
+       <div>
       {/* <LogIn /> */}
       
       <Switch>
@@ -78,8 +115,16 @@ class App extends React.Component {
 
         <Route path="/login" component={LogIn}/>
       </Switch>
-    </div>
-  )}
-}
+      </div>
+      <Validation
+      user={this.state.user}
+      displayLoginBool={this.state.displayLogin}
+      displayRegisterBool={this.state.displayRegister}
+      displayRegister={this.displayRegister}
+      displayLogin={this.displayLogin}
+      handleUsernameChange={this.handleUsernameChange}
+      handlePasswordChange={this.handlePasswordChange}
+      createUser={this.createUser}
+      validateUser={this.validateUser}
 
-export default App;
+export default App
