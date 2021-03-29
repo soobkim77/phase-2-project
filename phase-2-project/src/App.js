@@ -3,11 +3,16 @@ import {Route, Switch} from 'react-router-dom';
 import './login.css'
 import Validation from './pages/Validation';
 let APIkey = 'u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa'
+import Home from './Pages/Home'
 
 
 class App extends React.Component {
    
   state = {
+    fiction: [],
+    nonF: [],
+    currentF: 0,
+    currentN: 0,
     user: {
       username: "",
       password: ""
@@ -16,12 +21,49 @@ class App extends React.Component {
     displayRegister: false
   }
 
-  // componentDidMount = () => {
-  //   fetch(`https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
-  //   .then(r => r.json())
-  //   .then(list => console.log(list.results))
-  // }
+  fiveFBooks = () => {
+    return this.state.fiction.slice(this.state.currentF, this.state.currentF+5)  
+  }
 
+  moreFBooks = () => {
+    if (this.state.currentF < this.state.fiction.length - 5) {
+      
+      this.setState({currentF: this.state.currentF+5})
+    } else {
+      this.setState({ currentF: 0 })
+    }
+    
+  }
+
+  getFiction = () => {
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
+    .then(r => r.json())
+    .then(list => this.setState({fiction: list.results.books}))
+  }
+
+  fiveNBooks = () => {
+    return this.state.nonF.slice(this.state.currentN, this.state.currentN+5)  
+  }
+
+  moreNBooks = () => {
+    if (this.state.currentN < this.state.nonF.length - 5) {
+      
+      this.setState({currentN: this.state.currentN+5})
+    } else {
+      this.setState({ currentN: 0 })
+    }
+  }
+
+  getNonFiction = () => {
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
+    .then(r => r.json())
+    .then(list => this.setState({nonF: list.results.books}))
+  }
+
+  componentDidMount = () => {
+    this.getFiction()
+    this.getNonFiction()
+  }
 
   displayRegister = () => {
     this.setState({displayLogin: false, displayRegister: true})
@@ -62,9 +104,5 @@ class App extends React.Component {
       handlePasswordChange={this.handlePasswordChange}
       createUser={this.createUser}
       validateUser={this.validateUser}
-
-      />    
-    )}
-}
-
-export default App;
+=======
+export default App
