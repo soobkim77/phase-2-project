@@ -4,7 +4,6 @@ import Home from './Pages/Home';
 import BookInfo from './components/BookInfo'
 import './login.css';
 import Validation from './Pages/Validation';
-import UserPreferences from './Pages/UserPreferences';
 import NavBar from './components/NavBar';
 import MyUser from './Pages/MyUser'
 
@@ -171,10 +170,7 @@ class App extends React.Component {
         taste: this.state.user.taste
       })
     })
-    
-    
     .then(res => {
-      
       this.setState({isLoggedIn: true})
       let URL = this.state.user.taste.replaceAll("^\"+|\"+$", "")
       this.getMyList(URL)
@@ -199,6 +195,7 @@ class App extends React.Component {
 
   handleTasteChange = (e) => {
     this.setState({user: {...this.state.user, taste: e.target.value}})
+  }
 
   removeBook = (id) => {
     fetch(`http://localhost:3000/mybooks/${id}`,{"Method": "DELETE"})
@@ -208,8 +205,6 @@ class App extends React.Component {
   }
 
   render (){
-    
-   console.log(this.state.user.taste) 
     return (
       <div>
         
@@ -239,11 +234,6 @@ class App extends React.Component {
           <Route path="/book/:rank" render={() => {
             return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
             />
-
-            
-
-
-        
           <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} bookInfo={this.bookInfo} added={this.state.added} remove={this.removeBook} />} />
         </Switch>
     </div>
@@ -251,16 +241,3 @@ class App extends React.Component {
     )}
 }
 export default App
-
- {/* </div>
-        <Validation
-        user={this.state.user}
-        displayLoginBool={this.state.displayLogin}
-        displayRegisterBool={this.state.displayRegister}
-        displayRegister={this.displayRegister}
-        displayLogin={this.displayLogin}
-        handleUsernameChange={this.handleUsernameChange}
-        handlePasswordChange={this.handlePasswordChange}
-        createUser={this.createUser}
-        validateUser={this.validateUser}/>
-      </div> */}

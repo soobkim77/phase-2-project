@@ -175,6 +175,66 @@
       "book_uri": "nyt://book/c1e67281-ccaa-5cb6-9558-dc0f08a600fc",
       "userID": 2,
       "id": 3
+    },
+    {
+      "rank": 4,
+      "rank_last_week": 8,
+      "weeks_on_list": 80,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "1421580365",
+      "primary_isbn13": "9781421580364",
+      "publisher": "VIZ Media",
+      "description": "Ken Kaneki is attacked by a monster, but survives the encounter and becomes the first half-human, half-ghoul hybrid.",
+      "price": "0.00",
+      "title": "TOKYO GHOUL, VOL. 1",
+      "author": "Sui Ishida",
+      "contributor": "by Sui Ishida",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9781421580364.jpg",
+      "book_image_width": 330,
+      "book_image_height": 474,
+      "amazon_product_url": "http://www.amazon.com/Tokyo-Ghoul-Vol-Sui-Ishida/dp/1421580365?tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "1421580365",
+          "isbn13": "9781421580364"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "http://www.amazon.com/Tokyo-Ghoul-Vol-Sui-Ishida/dp/1421580365?tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=TOKYO+GHOUL%2C+VOL.+1&author=Sui+Ishida"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9781421580364"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTOKYO%252BGHOUL%25252C%252BVOL.%252B1%252FSui%252BIshida%252F9781421580364&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTOKYO%252BGHOUL%25252C%252BVOL.%252B1%252BSui%252BIshida"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9781421580364&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DTOKYO%2BGHOUL%252C%2BVOL.%2B1"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9781421580364%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTOKYO%2BGHOUL%252C%2BVOL.%2B1%2BSui%2BIshida%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/901d06dc-09c3-5275-8e7c-6acf36dc3188",
+      "userID": 2,
+      "id": 4
     }
   ],
   "taste": [
