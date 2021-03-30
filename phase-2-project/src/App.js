@@ -4,6 +4,7 @@ import Home from './Pages/Home';
 import BookInfo from './components/BookInfo'
 import './login.css';
 import Validation from './Pages/Validation';
+import UserPreferences from './Pages/UserPreferences';
 
 
 
@@ -24,8 +25,15 @@ class App extends React.Component {
     displayLogin: true,
     displayRegister: false,
     myList: [],
-    allUsers: []
+    allUsers: [],
+    allLists: []
   }
+
+  getAllLists = () => {
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
+    .then(r => r.json())
+    .then(lists => this.setState({allLists: lists.results}))
+}
 
   getMyList = () => {
     fetch(`http://localhost:3000/mybooks?userID=${this.state.user.id}`)
@@ -40,9 +48,10 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    this.getFiction()
-    this.getNonFiction()
+    // this.getFiction()
+    // this.getNonFiction()
     this.getUsers()
+    this.getAllLists()
   }
 
   getUsers = () => {
@@ -162,11 +171,12 @@ class App extends React.Component {
             createUser={(e) => this.createUser(e)}
             validateUser={(e) => this.validateUser(e)}/>
           }}>
-            {this.state.isLoggedIn ? <Redirect to='/books' /> : null}
+            {this.state.isLoggedIn ? <Redirect to='/preferences' /> : null}
           </Route>
           <Route path="/book/:rank" render={() => {
             return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
             />
+            <Route path='/preferences' render={()=> <UserPreferences lists={this.state.allLists} get={this.getAllLists}/>} />
 
         </Switch>
     </div>
