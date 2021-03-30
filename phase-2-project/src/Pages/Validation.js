@@ -36,6 +36,9 @@ class Validation extends Component {
                 handleLogin={this.props.createUser}
                 handleUsernameChange={this.props.handleUsernameChange} 
                 handlePasswordChange={this.props.handlePasswordChange} 
+                lists={this.props.lists}
+                createUser={this.props.createUser}
+                handleChange={this.props.handleChange}
                 />}
             </div>
             <Route path="/login" component={LogIn}/>

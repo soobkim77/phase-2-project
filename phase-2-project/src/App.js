@@ -159,6 +159,7 @@ class App extends React.Component {
 
   createUser = (e) => {
     e.preventDefault()
+    
     fetch('http://localhost:3000/users', {
       method: 'POST',
       headers: {
@@ -167,10 +168,18 @@ class App extends React.Component {
       body: JSON.stringify({
         username: this.state.user.username,
         password: this.state.user.password,
-        taste: ""
+        taste: this.state.user.taste
       })
     })
-  }
+    
+    
+    .then(res => {
+      
+      this.setState({isLoggedIn: true})
+      let URL = this.state.user.taste.replaceAll("^\"+|\"+$", "")
+      this.getMyList(URL)
+  })
+}
   
   validateUser = (e) => {
     e.preventDefault()
@@ -187,14 +196,20 @@ class App extends React.Component {
     }
   }
 
+
+  handleTasteChange = (e) => {
+    this.setState({user: {...this.state.user, taste: e.target.value}})
+
   removeBook = (id) => {
     fetch(`http://localhost:3000/mybooks/${id}`,{"Method": "DELETE"})
     .then(r => r.json())
     .then(console.log(id))
+
   }
 
   render (){
     
+   console.log(this.state.user.taste) 
     return (
       <div>
         
@@ -211,14 +226,24 @@ class App extends React.Component {
             handleUsernameChange={this.handleUsernameChange}
             handlePasswordChange={this.handlePasswordChange}
             createUser={(e) => this.createUser(e)}
-            validateUser={(e) => this.validateUser(e)}/>
+            validateUser={(e) => this.validateUser(e)}
+            lists={this.state.allLists}
+            get={this.getAllLists}
+            handleChange={this.handleTasteChange} 
+            />
           }}>
-            {this.state.isLoggedIn ? <Redirect to='/books' /> : null}
+            
+            {this.state.isLoggedIn ? <Redirect to='/books' /> : null  } 
+            
           </Route>
           <Route path="/book/:rank" render={() => {
             return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
             />
-          <Route path='/preferences' render={()=> <UserPreferences lists={this.state.allLists} get={this.getAllLists}/>} />
+
+            
+
+
+        
           <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} bookInfo={this.bookInfo} added={this.state.added} remove={this.removeBook} />} />
         </Switch>
     </div>
