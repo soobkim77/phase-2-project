@@ -19,7 +19,7 @@ const Book = (props) => {
                 <Card.Content extra>
                     <span>{props.book.description}</span>
                 </Card.Content>
-                <Link to={`/book/${props.book.rank}`} className="ui red basic button">
+                <Link to={`/book/${props.book.title}`} className="ui blue basic button">
                 More Info
                 </Link>
             </div>

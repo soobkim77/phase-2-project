@@ -20,9 +20,21 @@ class App extends React.Component {
       password: ""
     },
     displayLogin: true,
-    displayRegister: false
+    displayRegister: false,
+    myList: []
   }
 
+  getMyList = () => {
+    fetch(`http://localhost:3000/mybooks?userID=${this.state.user.id}`)
+    .then(r => r.json())
+    .then(list => this.setState({myList: list}))
+  }
+
+  addBook = (book) => {
+      let update = [...this.state.myList]
+      update.push(book)
+      this.setState({myList: update})
+  }
 
   bookInfo = (book) => {
     this.setState({currentBook: book})
@@ -39,8 +51,7 @@ class App extends React.Component {
       this.setState({currentF: this.state.currentF+5})
     } else {
       this.setState({ currentF: 0 })
-    }
-    
+    } 
   }
 
   getFiction = () => {
@@ -68,10 +79,12 @@ class App extends React.Component {
     .then(list => this.setState({nonF: list.results.books}))
   }
 
-  componentDidMount = () => {
-    this.getFiction()
-    this.getNonFiction()
-  }
+  
+
+  // componentDidMount = () => {
+  //   this.getFiction()
+  //   this.getNonFiction()
+  // }
 
 
   displayRegister = () => {
@@ -118,9 +131,9 @@ class App extends React.Component {
             createUser={this.createUser}
             validateUser={this.validateUser}/>
           }} />
-          {/* <Route path="/book/:rank" render={() => {
-            return <BookInfo book={this.state.currentBook}/>}}
-            /> */}
+          <Route path="/book/:rank" render={() => {
+            return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
+            />
 
         </Switch>
     </div>

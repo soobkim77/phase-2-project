@@ -16,7 +16,8 @@ const BookInfo = (props) => {
             />
             <h4>By: {props.book.author}</h4>
             <p>{props.book.description}</p>
-
+            <button className="ui basic blue button" onClick={() => props.add(props.book)} >Add to My List</button>
+            <br/>
             <div className="ui grid">
                 {props.book.buy_links.map(link => {
                     return (
