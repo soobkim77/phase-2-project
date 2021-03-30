@@ -4,17 +4,22 @@ class UserPreferences extends React.Component {
 
     
     render(){
-        console.log(this.props.lists)
+        
         return (
             <div>
+                <h1>Choose Your Taste (select 1)</h1>
+                <form onSubmit={this.props.submitTaste} onChange={this.props.handleChange}> 
                 {this.props.lists.map(list => {
                     return (
-                    <div>
-                        <input type="checkbox" value={list.display_name} name={list.display_name}/> 
+                    <div key={list.list_name_encoded}>
+                        <input type="radio" value={list.list_name_encoded} id={list.display_name} name="list.display_name" /> 
                         <label htmlFor={list.display_name}>{list.display_name}</label>
                     </div>
                     )
                 })}
+                <br/>
+                <button type="submit" value="Update Taste">Update Taste</button>
+                </form>
             </div>
         )
     }

@@ -139,6 +139,7 @@ class App extends React.Component {
 
   createUser = (e) => {
     e.preventDefault()
+    
     fetch('http://localhost:3000/users', {
       method: 'POST',
       headers: {
@@ -147,10 +148,18 @@ class App extends React.Component {
       body: JSON.stringify({
         username: this.state.user.username,
         password: this.state.user.password,
-        taste: ""
+        taste: this.state.user.taste
       })
     })
-  }
+    
+    
+    .then(res => {
+      
+      this.setState({isLoggedIn: true})
+      let URL = this.state.user.taste.replaceAll("^\"+|\"+$", "")
+      this.getMyList(URL)
+  })
+}
   
   validateUser = (e) => {
     e.preventDefault()
@@ -158,7 +167,7 @@ class App extends React.Component {
     let correctUser = allUsers.find(user => user.username === this.state.user.username)
     if (correctUser.password === this.state.user.password){
       this.setState({isLoggedIn: true, user: correctUser})
-      let URL = correctUser.taste[0].replaceAll("^\"+|\"+$", "")
+      let URL = correctUser.taste.replaceAll("^\"+|\"+$", "")
       this.getMyList(URL)
     }
     else {
@@ -166,8 +175,13 @@ class App extends React.Component {
     }
   }
 
+  handleTasteChange = (e) => {
+    this.setState({user: {...this.state.user, taste: e.target.value}})
+  }
+
   render (){
     
+   console.log(this.state.user.taste) 
     return (
       <div>
         <Switch>
@@ -182,14 +196,20 @@ class App extends React.Component {
             handleUsernameChange={this.handleUsernameChange}
             handlePasswordChange={this.handlePasswordChange}
             createUser={(e) => this.createUser(e)}
-            validateUser={(e) => this.validateUser(e)}/>
+            validateUser={(e) => this.validateUser(e)}
+            lists={this.state.allLists}
+            get={this.getAllLists}
+            handleChange={this.handleTasteChange} 
+            />
           }}>
-            {this.state.isLoggedIn ? <Redirect to='/books' /> : null}
+            
+            {this.state.isLoggedIn ? <Redirect to='/books' /> : null  } 
+            
           </Route>
           <Route path="/book/:rank" render={() => {
             return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
             />
-            <Route path='/preferences' render={()=> <UserPreferences lists={this.state.allLists} get={this.getAllLists}/>} />
+            
 
         </Switch>
     </div>

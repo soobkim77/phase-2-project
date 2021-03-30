@@ -3,20 +3,44 @@
     {
       "username": "evanahouse",
       "password": "1234",
-      "taste": [],
+      "taste": "science",
       "id": 1
     },
     {
       "username": "soob",
       "password": "1234",
-      "taste": "combined-print-and-e-book-nonfiction"
+      "taste": "animals",
       "id": 2
     },
     {
       "username": "larry",
       "password": "1234",
-      "taste": [],
+      "taste": "",
       "id": 3
+    },
+    {
+      "username": "roman",
+      "password": "1234",
+      "taste": "",
+      "id": 4
+    },
+    {
+      "username": "roman",
+      "password": "1234",
+      "taste": "",
+      "id": 5
+    },
+    {
+      "username": "kai",
+      "password": "1234",
+      "taste": "audio-fiction",
+      "id": 6
+    },
+    {
+      "username": "bingo",
+      "password": "1234",
+      "taste": "hardcover-nonfiction",
+      "id": 7
     }
   ],
   "mybooks": [
