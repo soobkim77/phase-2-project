@@ -64,7 +64,6 @@ class App extends React.Component {
       let update = [...this.state.myBooks]
       book.userID = this.state.user.id
       update.push(book)
-      this.setState({myBooks: update})
       fetch(`http://localhost:3000/mybooks`,{
         "method": 'POST',
         "headers": {
@@ -73,7 +72,10 @@ class App extends React.Component {
         "body": JSON.stringify(book)
       })
       .then(r=>r.json())
-      .then(book => console.log(book))
+      .then(book => {
+        
+        this.setState({myBooks: book})
+      })
   }
 
   getMyBooks = (id) => {
@@ -198,9 +200,10 @@ class App extends React.Component {
   }
 
   removeBook = (id) => {
-    fetch(`http://localhost:3000/mybooks/${id}`,{"Method": "DELETE"})
+    let newlist = this.state.myBooks.filter(x => x.id !== id)
+    fetch(`http://localhost:3000/mybooks/${id}`,{"method": "DELETE"})
     .then(r => r.json())
-    .then(console.log(id))
+    .then(this.setState({myBooks: newlist}))
 
   }
 
@@ -234,7 +237,7 @@ class App extends React.Component {
           <Route path="/book/:rank" render={() => {
             return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
             />
-          <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} bookInfo={this.bookInfo} added={this.state.added} remove={this.removeBook} />} />
+          <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} bookInfo={this.bookInfo} remove={this.removeBook}/>} />
         </Switch>
     </div>
      
