@@ -4,7 +4,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 const Book = (props) => {
     return(
-    <div className="ui column">
+    <div className="ui column book">
             <div className="ui card" onClick={() => props.click(props.book)}>
                 <Image src={props.book.book_image} wrapped ui={false} />
                 <Card.Content>

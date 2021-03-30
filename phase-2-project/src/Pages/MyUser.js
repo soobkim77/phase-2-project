@@ -1,4 +1,5 @@
 import React from 'react';
+import Book from '../components/Book'
 
 class MyUser extends React.Component {
 
@@ -11,7 +12,7 @@ class MyUser extends React.Component {
             <div>
                 <h4>Reading Wish List</h4>
                 <div>
-                    {this.props.map()}
+                    {this.props.myBooks.map(book => <Book book={book}/>)}
                 </div>
             </div>
         )
