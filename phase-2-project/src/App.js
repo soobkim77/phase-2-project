@@ -5,6 +5,8 @@ import BookInfo from './components/BookInfo'
 import './login.css';
 import Validation from './Pages/Validation';
 import UserPreferences from './Pages/UserPreferences';
+import NavBar from './components/NavBar';
+import MyUser from './Pages/MyUser'
 
 
 
@@ -28,7 +30,9 @@ class App extends React.Component {
     displayRegister: false,
     myList: [],
     allUsers: [],
-    allLists: []
+    allLists: [],
+    myBooks: [],
+    added: false
   }
 
   getAllLists = () => {
@@ -48,7 +52,7 @@ class App extends React.Component {
   }
 
   moreMyBooks = () => {
-    if (this.state.currentN < this.state.myList.length - 5) {
+    if (this.state.currentMy < this.state.myList.length - 5) {
       
       this.setState({currentMy: this.state.currentMy+5})
     } else {
@@ -57,11 +61,27 @@ class App extends React.Component {
   }
 
 
-  // addBook = (book) => {
-  //     let update = [...this.state.myList]
-  //     update.push(book)
-  //     this.setState({myList: update})
-  // }
+  addBook = (book) => {
+      let update = [...this.state.myBooks]
+      book.userID = this.state.user.id
+      update.push(book)
+      this.setState({myBooks: update})
+      fetch(`http://localhost:3000/mybooks`,{
+        "method": 'POST',
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": JSON.stringify(book)
+      })
+      .then(r=>r.json())
+      .then(book => console.log(book))
+  }
+
+  getMyBooks = (id) => {
+      fetch(`http://localhost:3000/mybooks?userID=${id}`)
+      .then(r => r.json())
+      .then(books => this.setState({myBooks: books}))
+  }
 
   componentDidMount = () => {
     this.getFiction()
@@ -169,14 +189,22 @@ class App extends React.Component {
       this.setState({isLoggedIn: true, user: correctUser})
       let URL = correctUser.taste.replaceAll("^\"+|\"+$", "")
       this.getMyList(URL)
+      this.getMyBooks(correctUser.id)
     }
     else {
       console.log('wrong password')
     }
   }
 
+
   handleTasteChange = (e) => {
     this.setState({user: {...this.state.user, taste: e.target.value}})
+
+  removeBook = (id) => {
+    fetch(`http://localhost:3000/mybooks/${id}`,{"Method": "DELETE"})
+    .then(r => r.json())
+    .then(console.log(id))
+
   }
 
   render (){
@@ -184,8 +212,10 @@ class App extends React.Component {
    console.log(this.state.user.taste) 
     return (
       <div>
+        
+        {this.state.isLoggedIn ? <NavBar /> : null}
         <Switch>
-          <Route path="/books" render={() => <Home  fList={this.fiveFBooks()} nList={this.fiveNBooks()} moreF={this.moreFBooks} moreN={this.moreNBooks} click={this.bookInfo} myList={this.fiveMyBooks()} moreMy={this.moreMyBooks}/>}/>
+          <Route path="/books" render={() => <Home  fList={this.fiveFBooks()} nList={this.fiveNBooks()} moreF={this.moreFBooks} moreN={this.moreNBooks} click={this.bookInfo} myList={this.fiveMyBooks()} moreMy={this.moreMyBooks} header={this.state.user.taste} />}/>
           <Route exact path="/" render={()=> {
             return <Validation
             user={this.state.user}
@@ -209,8 +239,12 @@ class App extends React.Component {
           <Route path="/book/:rank" render={() => {
             return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
             />
+
             
 
+
+        
+          <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} bookInfo={this.bookInfo} added={this.state.added} remove={this.removeBook} />} />
         </Switch>
     </div>
      

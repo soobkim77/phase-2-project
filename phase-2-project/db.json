@@ -9,7 +9,7 @@
     {
       "username": "soob",
       "password": "1234",
-      "taste": "animals",
+      "taste": "manga",
       "id": 2
     },
     {
@@ -45,11 +45,136 @@
   ],
   "mybooks": [
     {
-      "book": {
-        "title": "Hello Kitty"
-      },
-      "id": 1,
-      "userID": 1
+      "rank": 1,
+      "rank_last_week": 0,
+      "weeks_on_list": 1,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "None",
+      "primary_isbn13": "9781538748268",
+      "publisher": "Grand Central",
+      "description": "Windsor Horne Lockwood III might rectify cold cases connected to his family that have eluded the F.B.I. for decades.",
+      "price": "0.00",
+      "title": "WIN",
+      "author": "Harlan Coben",
+      "contributor": "by Harlan Coben",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9781538748213.jpg",
+      "book_image_width": 331,
+      "book_image_height": 500,
+      "amazon_product_url": "https://www.amazon.com/dp/1538748215?tag=NYTBSREV-20&tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "1538748215",
+          "isbn13": "9781538748213"
+        },
+        {
+          "isbn10": "1538706415",
+          "isbn13": "9781538706411"
+        },
+        {
+          "isbn10": "1538704234",
+          "isbn13": "9781538704233"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/dp/1538748215?tag=NYTBSREV-20&tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=WIN&author=Harlan+Coben"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9781538748268"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FWIN%252FHarlan%252BCoben%252F9781538748268&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DWIN%252BHarlan%252BCoben"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9781538748268&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DWIN"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9781538748268%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DWIN%2BHarlan%2BCoben%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/9a14232b-48b2-5d5f-8a84-09e2f7345aa5",
+      "userID": 2,
+      "id": 2
+    },
+    {
+      "rank": 2,
+      "rank_last_week": 1,
+      "weeks_on_list": 2,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "1982115858",
+      "primary_isbn13": "9781982115852",
+      "publisher": "Simon & Schuster",
+      "description": "How the Nobel Prize winner Jennifer Doudna and her colleagues invented CRISPR, a tool that can edit DNA.",
+      "price": "0.00",
+      "title": "THE CODE BREAKER",
+      "author": "Walter Isaacson",
+      "contributor": "by Walter Isaacson",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9781982115852.jpg",
+      "book_image_width": 329,
+      "book_image_height": 500,
+      "amazon_product_url": "https://www.amazon.com/dp/1982115858?tag=NYTBSREV-20&tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "1982115858",
+          "isbn13": "9781982115852"
+        },
+        {
+          "isbn10": "1982115874",
+          "isbn13": "9781982115876"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/dp/1982115858?tag=NYTBSREV-20&tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=THE+CODE+BREAKER&author=Walter+Isaacson"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9781982115852"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BCODE%252BBREAKER%252FWalter%252BIsaacson%252F9781982115852&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BCODE%252BBREAKER%252BWalter%252BIsaacson"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9781982115852&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DTHE%2BCODE%2BBREAKER"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9781982115852%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BCODE%2BBREAKER%2BWalter%2BIsaacson%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/c1e67281-ccaa-5cb6-9558-dc0f08a600fc",
+      "userID": 2,
+      "id": 3
     }
   ],
   "taste": [

@@ -21,7 +21,7 @@ const BookInfo = (props) => {
             <div className="ui grid">
                 {props.book.buy_links.map(link => {
                     return (
-                        <a href={link.url}>{link.name}</a>
+                        <a key={link.name} href={link.url}>{link.name}</a>
                     )
                 })}
             </div>
