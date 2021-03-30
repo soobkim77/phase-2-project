@@ -15,11 +15,13 @@ class App extends React.Component {
     nonF: [],
     currentF: 0,
     currentN: 0,
+    currentMy: 0,
     currentBook: [],
     user: {
       username: "",
       password: "",
-      taste: []
+      taste: "",
+      id: ""
     },
     isLoggedIn: false,
     displayLogin: true,
@@ -33,23 +35,37 @@ class App extends React.Component {
     fetch(`https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
     .then(r => r.json())
     .then(lists => this.setState({allLists: lists.results}))
-}
+  }
 
-  getMyList = () => {
-    fetch(`http://localhost:3000/mybooks?userID=${this.state.user.id}`)
+  getMyList = (URL) => {
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/${URL}.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
     .then(r => r.json())
-    .then(list => this.setState({myList: list}))
+    .then(books => this.setState({myList: books.results.books}))
   }
 
-  addBook = (book) => {
-      let update = [...this.state.myList]
-      update.push(book)
-      this.setState({myList: update})
+  fiveMyBooks = () => {
+    return this.state.myList.slice(this.state.currentMy, this.state.currentMy+5)  
   }
+
+  moreMyBooks = () => {
+    if (this.state.currentN < this.state.myList.length - 5) {
+      
+      this.setState({currentMy: this.state.currentMy+5})
+    } else {
+      this.setState({ currentMy: 0 })
+    }
+  }
+
+
+  // addBook = (book) => {
+  //     let update = [...this.state.myList]
+  //     update.push(book)
+  //     this.setState({myList: update})
+  // }
 
   componentDidMount = () => {
-    // this.getFiction()
-    // this.getNonFiction()
+    this.getFiction()
+    this.getNonFiction()
     this.getUsers()
     this.getAllLists()
   }
@@ -141,16 +157,13 @@ class App extends React.Component {
     let allUsers = this.state.allUsers
     let correctUser = allUsers.find(user => user.username === this.state.user.username)
     if (correctUser.password === this.state.user.password){
-      this.setState({isLoggedIn: true})
+      this.setState({isLoggedIn: true, user: correctUser})
+      let URL = correctUser.taste[0].replaceAll("^\"+|\"+$", "")
+      this.getMyList(URL)
     }
     else {
       console.log('wrong password')
     }
-    
-
-     
-
-    
   }
 
   render (){
@@ -158,7 +171,7 @@ class App extends React.Component {
     return (
       <div>
         <Switch>
-          <Route path="/books" render={() => <Home fiction={this.getFiction} fList={this.fiveFBooks()} nList={this.fiveNBooks()} moreF={this.moreFBooks} moreN={this.moreNBooks} click={this.bookInfo}/>}/>
+          <Route path="/books" render={() => <Home  fList={this.fiveFBooks()} nList={this.fiveNBooks()} moreF={this.moreFBooks} moreN={this.moreNBooks} click={this.bookInfo} myList={this.fiveMyBooks()} moreMy={this.moreMyBooks}/>}/>
           <Route exact path="/" render={()=> {
             return <Validation
             user={this.state.user}
@@ -171,7 +184,7 @@ class App extends React.Component {
             createUser={(e) => this.createUser(e)}
             validateUser={(e) => this.validateUser(e)}/>
           }}>
-            {this.state.isLoggedIn ? <Redirect to='/preferences' /> : null}
+            {this.state.isLoggedIn ? <Redirect to='/books' /> : null}
           </Route>
           <Route path="/book/:rank" render={() => {
             return <BookInfo book={this.state.currentBook} add={this.addBook} />}}

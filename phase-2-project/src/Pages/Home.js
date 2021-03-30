@@ -10,6 +10,9 @@ class Home extends Component {
                 <br/>
                 <br/>
                 <GenreContainer List={this.props.nList} more={this.props.moreN} click={this.props.click}/>
+                <br/>
+                <br/>
+                <GenreContainer List={this.props.myList} more={this.props.moreMy} click={this.props.click} />
             </Fragment>
         )
     }

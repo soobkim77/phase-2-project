@@ -3,19 +3,19 @@
     {
       "username": "evanahouse",
       "password": "1234",
-      "taste": "",
+      "taste": [],
       "id": 1
     },
     {
       "username": "soob",
       "password": "1234",
-      "taste": "",
+      "taste": "combined-print-and-e-book-nonfiction"
       "id": 2
     },
     {
       "username": "larry",
       "password": "1234",
-      "taste": "",
+      "taste": [],
       "id": 3
     }
   ],
