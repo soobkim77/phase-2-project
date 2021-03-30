@@ -1,29 +1,38 @@
 {
-    "users": [
-        {
-            "username": "evanhouse",
-            "pin": 1111,
-            "id": 1
-        }
-    ],
-
-    "mybooks": [
-        {
-            "book": {
-                "title": "Hello Kitty"
-            },
-            "id": 1,
-            "userID": 1
-        }
-    ],
-
-    "taste": [
-        {
-            "genre": "fiction",
-            "id": 1,
-            "userID": 1
-        }
-    ]
-
-
+  "users": [
+    {
+      "username": "evanahouse",
+      "password": "1234",
+      "taste": "",
+      "id": 1
+    },
+    {
+      "username": "soob",
+      "password": "1234",
+      "taste": "",
+      "id": 2
+    },
+    {
+      "username": "larry",
+      "password": "1234",
+      "taste": "",
+      "id": 3
+    }
+  ],
+  "mybooks": [
+    {
+      "book": {
+        "title": "Hello Kitty"
+      },
+      "id": 1,
+      "userID": 1
+    }
+  ],
+  "taste": [
+    {
+      "genre": "fiction",
+      "id": 1,
+      "userID": 1
+    }
+  ]
 }

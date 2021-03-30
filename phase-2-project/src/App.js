@@ -17,12 +17,26 @@ class App extends React.Component {
     currentBook: [],
     user: {
       username: "",
-      password: ""
+      password: "",
+      taste: []
     },
     displayLogin: true,
-    displayRegister: false
+    displayRegister: false,
+    allUsers: [],
+   
   }
 
+  componentDidMount = () => {
+    // this.getFiction()
+    // this.getNonFiction()
+    this.getUsers()
+  }
+
+  getUsers = () => {
+    fetch('http://localhost:3000/users')
+    .then(res => res.json())
+    .then(allUsers => this.setState({allUsers})) 
+  }
 
   bookInfo = (book) => {
     this.setState({currentBook: book})
@@ -68,11 +82,7 @@ class App extends React.Component {
     .then(list => this.setState({nonF: list.results.books}))
   }
 
-  componentDidMount = () => {
-    this.getFiction()
-    this.getNonFiction()
-  }
-
+  
 
   displayRegister = () => {
     this.setState({displayLogin: false, displayRegister: true})
@@ -92,12 +102,34 @@ class App extends React.Component {
 
   createUser = (e) => {
     e.preventDefault()
-    console.log(e)
+    fetch('http://localhost:3000/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify({
+        username: this.state.user.username,
+        password: this.state.user.password,
+        taste: ""
+      })
+    })
   }
   
   validateUser = (e) => {
     e.preventDefault()
-    console.log(e)
+    let allUsers = this.state.allUsers
+    let correctUser = allUsers.find(user => user.username === this.state.user.username)
+    if (correctUser.password === this.state.user.password){
+      console.log('access granted')
+    }
+    else {
+      console.log('wrong password')
+    }
+    
+
+     
+
+    
   }
 
   render (){
@@ -115,8 +147,8 @@ class App extends React.Component {
             displayLogin={this.displayLogin}
             handleUsernameChange={this.handleUsernameChange}
             handlePasswordChange={this.handlePasswordChange}
-            createUser={this.createUser}
-            validateUser={this.validateUser}/>
+            createUser={(e) => this.createUser(e)}
+            validateUser={(e) => this.validateUser(e)}/>
           }} />
           {/* <Route path="/book/:rank" render={() => {
             return <BookInfo book={this.state.currentBook}/>}}

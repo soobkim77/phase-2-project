@@ -29,11 +29,11 @@ class Validation extends Component {
                 user={this.props.user} 
                 handleUsernameChange={this.props.handleUsernameChange} 
                 handlePasswordChange={this.props.handlePasswordChange} 
-                handleLogin={(e) => this.validateUser(e)}
+                handleLogin={this.props.validateUser}
                 />}
             {this.props.displayRegisterBool && <Register 
                 user={this.props.user} 
-                handleLogin={(e) => this.createUser(e)}
+                handleLogin={this.props.createUser}
                 handleUsernameChange={this.props.handleUsernameChange} 
                 handlePasswordChange={this.props.handlePasswordChange} 
                 />}
