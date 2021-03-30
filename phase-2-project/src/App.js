@@ -22,8 +22,20 @@ class App extends React.Component {
     },
     displayLogin: true,
     displayRegister: false,
-    allUsers: [],
-   
+    myList: [],
+    allUsers: []
+  }
+
+  getMyList = () => {
+    fetch(`http://localhost:3000/mybooks?userID=${this.state.user.id}`)
+    .then(r => r.json())
+    .then(list => this.setState({myList: list}))
+  }
+
+  addBook = (book) => {
+      let update = [...this.state.myList]
+      update.push(book)
+      this.setState({myList: update})
   }
 
   componentDidMount = () => {
@@ -36,7 +48,7 @@ class App extends React.Component {
     fetch('http://localhost:3000/users')
     .then(res => res.json())
     .then(allUsers => this.setState({allUsers})) 
-  }
+    }
 
   bookInfo = (book) => {
     this.setState({currentBook: book})
@@ -53,8 +65,7 @@ class App extends React.Component {
       this.setState({currentF: this.state.currentF+5})
     } else {
       this.setState({ currentF: 0 })
-    }
-    
+    } 
   }
 
   getFiction = () => {
@@ -82,7 +93,7 @@ class App extends React.Component {
     .then(list => this.setState({nonF: list.results.books}))
   }
 
-  
+ 
 
   displayRegister = () => {
     this.setState({displayLogin: false, displayRegister: true})
@@ -150,9 +161,9 @@ class App extends React.Component {
             createUser={(e) => this.createUser(e)}
             validateUser={(e) => this.validateUser(e)}/>
           }} />
-          {/* <Route path="/book/:rank" render={() => {
-            return <BookInfo book={this.state.currentBook}/>}}
-            /> */}
+          <Route path="/book/:rank" render={() => {
+            return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
+            />
 
         </Switch>
     </div>

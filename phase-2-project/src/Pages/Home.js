@@ -6,7 +6,7 @@ class Home extends Component {
     render(){
         return (
             <Fragment>
-                <GenreContainer List={this.props.fList} more={this.props.moreF} click={this.props.click}/>
+                <GenreContainer List={this.props.fList} more={this.props.moreF} click={this.props.click} />
                 <br/>
                 <br/>
                 <GenreContainer List={this.props.nList} more={this.props.moreN} click={this.props.click}/>
