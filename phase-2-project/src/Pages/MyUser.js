@@ -11,8 +11,8 @@ class MyUser extends React.Component {
         return(
             <div>
                 <h4>Reading Wish List</h4>
-                <div>
-                    {this.props.myBooks.map(book => <Book book={book}/>)}
+                <div className="4 wide grid cards">
+                    {this.props.myBooks.map(book => <Book book={book} click={this.props.bookInfo} added={this.props.added} remove={this.props.remove} />)}
                 </div>
             </div>
         )

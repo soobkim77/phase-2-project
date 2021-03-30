@@ -31,7 +31,8 @@ class App extends React.Component {
     myList: [],
     allUsers: [],
     allLists: [],
-    myBooks: []
+    myBooks: [],
+    added: false
   }
 
   getAllLists = () => {
@@ -51,7 +52,7 @@ class App extends React.Component {
   }
 
   moreMyBooks = () => {
-    if (this.state.currentN < this.state.myList.length - 5) {
+    if (this.state.currentMy < this.state.myList.length - 5) {
       
       this.setState({currentMy: this.state.currentMy+5})
     } else {
@@ -186,6 +187,12 @@ class App extends React.Component {
     }
   }
 
+  removeBook = (id) => {
+    fetch(`http://localhost:3000/mybooks/${id}`,{"Method": "DELETE"})
+    .then(r => r.json())
+    .then(console.log(id))
+  }
+
   render (){
     
     return (
@@ -193,7 +200,7 @@ class App extends React.Component {
         
         {this.state.isLoggedIn ? <NavBar /> : null}
         <Switch>
-          <Route path="/books" render={() => <Home  fList={this.fiveFBooks()} nList={this.fiveNBooks()} moreF={this.moreFBooks} moreN={this.moreNBooks} click={this.bookInfo} myList={this.fiveMyBooks()} moreMy={this.moreMyBooks}/>}/>
+          <Route path="/books" render={() => <Home  fList={this.fiveFBooks()} nList={this.fiveNBooks()} moreF={this.moreFBooks} moreN={this.moreNBooks} click={this.bookInfo} myList={this.fiveMyBooks()} moreMy={this.moreMyBooks} header={this.state.user.taste} />}/>
           <Route exact path="/" render={()=> {
             return <Validation
             user={this.state.user}
@@ -212,7 +219,7 @@ class App extends React.Component {
             return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
             />
           <Route path='/preferences' render={()=> <UserPreferences lists={this.state.allLists} get={this.getAllLists}/>} />
-          <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} />} />
+          <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} bookInfo={this.bookInfo} added={this.state.added} remove={this.removeBook} />} />
         </Switch>
     </div>
      
