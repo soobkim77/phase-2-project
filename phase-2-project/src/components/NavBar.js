@@ -2,9 +2,9 @@ import {Link} from 'react-router-dom'
 
 const NavBar = props => {
     return(
-    <div className={`ui inverted grey menu`}>
-        <Link to="/books" className="ui button">Home</Link>
-        <Link to="/user" className="ui button">My Page</Link>
+    <div className="navbar">
+        <Link to="/books" className="navBtn">Home</Link>
+        <Link to="/user" className="navBtn">My Page</Link>
     </div>
     )
 }
