@@ -10,7 +10,7 @@ const GenreContainer = (props) => {
                     {props.List.map(book => { 
                     return <Book book={book} key={book.rank} click={props.click}/>
                     })}
-                         
+       
             </div>
             <button onClick={props.more} className="moreButton">
                 More Books!

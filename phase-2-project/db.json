@@ -385,11 +385,17 @@
       "id": 7
     }
   ],
-  "taste": [
+  "reviews": [
     {
-      "genre": "fiction",
+      "title": "WIN",
       "id": 1,
-      "userID": 1
+      "review": "This book sucks!"
+    },
+    {
+      "title": "THEFOURWINDS",
+      "review": "This book greatly changed my life. I didn't quite get to read it, but I assume it is a S-tier book. Probably. I don't really know how to read, so I guess I will never know. ",
+      "user": "soob",
+      "id": 2
     }
   ]
 }

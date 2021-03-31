@@ -1,5 +1,5 @@
 import GenreContainer from '../Containers/GenreContainer'
-import React, { Fragment, Component } from 'react'
+import React, { Component } from 'react'
 
 
 class Home extends Component {
