@@ -89,6 +89,30 @@
       "password": "234563425",
       "taste": "young-adult-paperback-monthly",
       "id": 15
+    },
+    {
+      "username": "evanahouse",
+      "password": "1111",
+      "taste": "young-adult-paperback-monthly",
+      "id": 16
+    },
+    {
+      "username": "brett",
+      "password": "1234",
+      "taste": "",
+      "id": 17
+    },
+    {
+      "username": "evanahouse",
+      "password": "6666",
+      "taste": "mass-market-monthly",
+      "id": 18
+    },
+    {
+      "username": "evanahouse3",
+      "password": "6667",
+      "taste": "young-adult",
+      "id": 19
     }
   ],
   "mybooks": [

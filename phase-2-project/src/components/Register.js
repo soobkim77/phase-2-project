@@ -3,6 +3,8 @@ import '../login.css'
 import Background from "../images/login.jpg"
 export default class Register extends Component {
     render() {
+        const isEnabled = this.props.user.username.length > 0 && this.props.user.password.length > 3 && this.props.user.password.length < 5 && this.props.user.taste.length > 0
+
         return (
              
         
@@ -22,8 +24,7 @@ export default class Register extends Component {
                         onChange={this.props.handleUsernameChange}
                         name="username"
                         className="login-input"
-                        placeholder="Username" 
-                        required="Required"/>
+                        />
                     </div>
 
                     <div className="input-group">
@@ -35,15 +36,13 @@ export default class Register extends Component {
                         name="password"
                         className="login-input"
                         placeholder="Password" 
-                        pattern={[
-                            '^.{4,4}$', // min 8 chars
-                            '(?=.*\\d)' //number required
-                        ]}/>
+                        />
                     </div>
                     
                 </form>
                 <div>
-                    <h1>Choose Your Taste (select 1)</h1>
+                    <h4>_______________________________________________</h4>
+                    <h4>Choose Your Favorite Genre </h4>
                     <form onSubmit={this.props.createUser} onChange={this.props.handleChange}> 
                     {this.props.lists.map(list => {
                         return (
@@ -54,7 +53,7 @@ export default class Register extends Component {
                         )
                     })}
                     <br/>
-                    <button type="submit" value="submit" className="login-btn">Register</button>
+                    <button disabled={!isEnabled} type="submit" value="submit" className="login-btn">Register</button>
                     </form>
                 </div>
             </div>

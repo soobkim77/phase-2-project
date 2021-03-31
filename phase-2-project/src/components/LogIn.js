@@ -5,6 +5,8 @@ export default class LogIn extends React.Component {
     
 
     render(){
+        const isEnabled = this.props.user.username.length > 0 && this.props.user.password.length > 3 && this.props.user.password.length < 5
+
         return (
             <div className="inner-container">
                 <div className="header">
@@ -21,7 +23,7 @@ export default class LogIn extends React.Component {
                             name="username"
                             className="login-input"
                             placeholder="Username"
-                            require="true" />
+                            />
                     </div>
 
                     <div className="input-group">
@@ -33,10 +35,10 @@ export default class LogIn extends React.Component {
                             name="password"
                             className="login-input"
                             placeholder="Password"
-                            require="true" />
+                            />
                     </div>
 
-                    <button type="submit" className="login-btn" value="submit">Login</button>
+                    <button disabled={!isEnabled} type="submit" className="login-btn" value="submit">Login</button>
                 </form>
         </div>
         )
