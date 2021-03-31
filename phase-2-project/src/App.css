@@ -1,15 +1,58 @@
+.html{
+  color-scheme: dark;
+}
 .App {
+  margin:30px;
   text-align: center;
 }
+ .bookContainer {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   
 
+ }
 
 /* .container {
   display: flexb
 } */
 
-/* .book {
-  margin: 30px;
-} */
+.bookCard {
+  margin: 15px;
+  border: solid rgba(0, 0, 100, 0.8) 5px;
+  width: 300px;
+  height: 600px;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: white;
+}
+
+.bookCard:hover {
+  box-shadow: 8px 28px 50px rgba(39, 44, 49, .5), 1px 6px 12px rgba(39, 44, 49, .04);
+  transition: all .4s ease;
+  transform: scale(1.05)
+  
+}
+.bookImage {
+  padding: 10px;
+  max-width: 80%;
+  max-height: auto;
+}
+
+.genreBarContainer{
+  display: grid;
+  flex-direction: row;
+  background-color: bisque;
+}
+
+.genreBar {
+  
+}
+
+
 
 /* .moreButton {
   height: 20px;

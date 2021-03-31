@@ -1,28 +1,21 @@
 import{Link} from 'react-router-dom';
-import { Card, Image } from 'semantic-ui-react';
-import 'semantic-ui-css/semantic.min.css'
+
 
 const Book = (props) => {
     return(
-    <div className="column book">
-            <div className="ui card" onClick={() => props.click(props.book)}>
-                <Image src={props.book.book_image} wrapped ui={false} />
-                <Card.Content>
-                    <Card.Header>{props.book.title}</Card.Header>
-                    <Card.Meta>
-                        <span className='date'>Rank: {props.book.rank}</span>
-                    </Card.Meta>
-                    <Card.Description>
-                    {props.book.author}
-                    </Card.Description>
-                </Card.Content>
-                <Card.Content extra>
-                    <span>{props.book.description}</span>
-                </Card.Content>
+    <div className="bookCard">
+            <div className="" onClick={() => props.click(props.book)}>
+                <img className="bookImage" src={props.book.book_image}  />
+                <div>
+                    <h2 className="title">{props.book.title}</h2>
+                    <div><span className='date'>Rank: {props.book.rank}</span></div>
+                    <h2>{props.book.author}</h2>
+                </div>
+                <p className="description"><span>{props.book.description}</span></p>
                 <Link to={`/book/${props.book.title}`} className="ui blue basic button">
                 About this book
                 </Link>
-                {props.added ? <button id={props.book.id} onClick={() => props.remove(props.book.id)}>Remove</button> : null}
+                {props.added ? <button className="abtBtn" id={props.book.id} onClick={() => props.removeBook(props.book.id)}/> : null}
             </div>
     </div>
     )

@@ -183,15 +183,19 @@ class App extends React.Component {
     e.preventDefault()
     let allUsers = this.state.allUsers
     let correctUser = allUsers.find(user => user.username === this.state.user.username)
-    if (correctUser.password === this.state.user.password){
+    if (correctUser){
+      if (correctUser.password === this.state.user.password){
       this.setState({isLoggedIn: true, user: correctUser})
       let URL = correctUser.taste.replaceAll("^\"+|\"+$", "")
       this.getMyList(URL)
       this.getMyBooks(correctUser.id)
     }
     else {
-      console.log('wrong password')
+      alert('Incorrect Password, Please Try Again')
     }
+  }
+  else{ alert("Username not found, Please Try Again")}
+    
   }
 
 
