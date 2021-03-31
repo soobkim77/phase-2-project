@@ -31,7 +31,22 @@ class App extends React.Component {
     allUsers: [],
     allLists: [],
     myBooks: [],
-    added: false
+    added: false,
+    change: false
+  }
+
+  //Get Requests to nyt
+
+  getFiction = () => {
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
+    .then(r => r.json())
+    .then(list => this.setState({fiction: list.results.books}))
+  }
+
+  getNonFiction = () => {
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
+    .then(r => r.json())
+    .then(list => this.setState({nonF: list.results.books}))
   }
 
   getAllLists = () => {
@@ -46,6 +61,34 @@ class App extends React.Component {
     .then(books => this.setState({myList: books.results.books}))
   }
 
+  //get request to db.json
+
+  getMyBooks = (id) => {
+    fetch(`http://localhost:3000/mybooks?userID=${id}`)
+    .then(r => r.json())
+    .then(books => this.setState({myBooks: books}))
+  }
+
+  getUsers = () => {
+    fetch('http://localhost:3000/users')
+    .then(res => res.json())
+    .then(allUsers => this.setState({allUsers})) 
+  }
+
+  //display
+
+  displayRegister = () => {
+    this.setState({displayLogin: false, displayRegister: true})
+  }
+
+  displayLogin = () => {
+    this.setState({displayLogin: true, displayRegister: false})
+  }
+
+  bookInfo = (book) => {
+    this.setState({currentBook: book})
+  }
+
   fiveMyBooks = () => {
     return this.state.myList.slice(this.state.currentMy, this.state.currentMy+5)  
   }
@@ -58,49 +101,6 @@ class App extends React.Component {
       this.setState({ currentMy: 0 })
     }
   }
-  
-
-
-  addBook = (book) => {
-      let update = [...this.state.myBooks]
-      book.userID = this.state.user.id
-      update.push(book)
-      fetch(`http://localhost:3000/mybooks`,{
-        "method": 'POST',
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "body": JSON.stringify(book)
-      })
-      .then(r=>r.json())
-      .then(book => {
-        this.setState({myBooks: book})
-      })
-  }
-
-  getMyBooks = (id) => {
-      fetch(`http://localhost:3000/mybooks?userID=${id}`)
-      .then(r => r.json())
-      .then(books => this.setState({myBooks: books}))
-  }
-
-  componentDidMount = () => {
-    this.getFiction()
-    this.getNonFiction()
-    this.getUsers()
-    this.getAllLists()
-  }
-
-  getUsers = () => {
-    fetch('http://localhost:3000/users')
-    .then(res => res.json())
-    .then(allUsers => this.setState({allUsers})) 
-    }
-
-  bookInfo = (book) => {
-    this.setState({currentBook: book})
-  }
-  
 
   fiveFBooks = () => {
     return this.state.fiction.slice(this.state.currentF, this.state.currentF+5)  
@@ -113,12 +113,6 @@ class App extends React.Component {
     } else {
       this.setState({ currentF: 0 })
     } 
-  }
-
-  getFiction = () => {
-    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
-    .then(r => r.json())
-    .then(list => this.setState({fiction: list.results.books}))
   }
 
   fiveNBooks = () => {
@@ -134,21 +128,7 @@ class App extends React.Component {
     }
   }
 
-  getNonFiction = () => {
-    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key=u8T73HzFr5YcjQLuZJwZs9H3LE6ALaRa`)
-    .then(r => r.json())
-    .then(list => this.setState({nonF: list.results.books}))
-  }
-
- 
-
-  displayRegister = () => {
-    this.setState({displayLogin: false, displayRegister: true})
-  }
-
-  displayLogin = () => {
-    this.setState({displayLogin: true, displayRegister: false})
-  }
+  //handlers
 
   handleUsernameChange = (e) => {
     this.setState({user: {...this.state.user, username: e.target.value}})
@@ -158,6 +138,26 @@ class App extends React.Component {
     this.setState({user: {...this.state.user, password: e.target.value}})
   }
 
+  handleTasteChange = (e) => {
+    this.setState({user: {...this.state.user, taste: e.target.value}})
+  }
+
+  addBook = (book) => {
+      let update = [...this.state.myBooks]
+      book.userID = this.state.user.id
+      update.push(book)
+      fetch(`http://localhost:3000/mybooks`,{
+        "method": 'POST',
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": JSON.stringify(book)
+      })
+      .then(r=>r.json())
+      .then(book => {
+        this.setState({myBooks: update})
+      })
+  }
 
   editPref = (e) => {
     e.preventDefault()
@@ -171,6 +171,7 @@ class App extends React.Component {
     .then(res => this.getMyList(res.taste))
   }
 
+  //user validation and creation
 
   createUser = (e) => {
     e.preventDefault()
@@ -195,9 +196,9 @@ class App extends React.Component {
       this.setState({isLoggedIn: true})
       let URL = this.state.user.taste.replaceAll("^\"+|\"+$", "")
       this.getMyList(URL)
-    })
+      })
+    }
   }
-}
   
   validateUser = (e) => {
     e.preventDefault()
@@ -209,18 +210,14 @@ class App extends React.Component {
       let URL = correctUser.taste.replaceAll("^\"+|\"+$", "")
       this.getMyList(URL)
       this.getMyBooks(correctUser.id)
+      this.getFiction()
+      this.getNonFiction()
     }
     else {
       alert('Incorrect Password, Please Try Again')
     }
   }
   else{ alert("Username not found, Please Try Again")}
-    
-  }
-
-
-  handleTasteChange = (e) => {
-    this.setState({user: {...this.state.user, taste: e.target.value}})
   }
 
   removeBook = (id) => {
@@ -228,7 +225,13 @@ class App extends React.Component {
     fetch(`http://localhost:3000/mybooks/${id}`,{"method": "DELETE"})
     .then(r => r.json())
     .then(this.setState({myBooks: newlist}))
+  }
 
+  componentDidMount = () => {
+    // this.getFiction()
+    // this.getNonFiction()
+    this.getUsers()
+    this.getAllLists()
   }
 
   render (){
@@ -261,7 +264,7 @@ class App extends React.Component {
           <Route path="/book/:rank" render={() => {
             return <BookInfo user={this.state.user.username} book={this.state.currentBook} add={this.addBook} />}}
             />
-          <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} pref={this.editPref} taste={this.handleTasteChange} bookInfo={this.bookInfo} lists={this.state.allLists} remove={this.removeBook}/>} />
+          <Route path='/user' render={() => <MyUser change={this.handleTasteChange} myBooks={this.state.myBooks} changeBool={this.state.change} pref={this.editPref} taste={this.handleTasteChange} bookInfo={this.bookInfo} lists={this.state.allLists} remove={this.removeBook}/>} />
         </Switch>
     </div>
      

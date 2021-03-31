@@ -247,6 +247,274 @@
       "book_uri": "nyt://book/c34834c6-f957-5b0b-8fd7-abd9c35eebed",
       "userID": 2,
       "id": 7
+    },
+    {
+      "rank": 3,
+      "rank_last_week": 0,
+      "weeks_on_list": 0,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "0544854411",
+      "primary_isbn13": "9780544854413",
+      "publisher": "Houghton Mifflin Harcourt",
+      "description": "Recipes for the Whole30 program of nonprocessed whole foods and no grains, dairy or sugar.",
+      "price": "0.00",
+      "title": "THE WHOLE30 COOKBOOK",
+      "author": "Melissa Hartwig",
+      "contributor": "by Melissa Hartwig",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9780544854413.jpg",
+      "book_image_width": 330,
+      "book_image_height": 372,
+      "amazon_product_url": "https://www.amazon.com/Whole30-Cookbook-Delicious-Totally-Compliant/dp/0544854411?tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "0544854411",
+          "isbn13": "9780544854413"
+        },
+        {
+          "isbn10": "0544854446",
+          "isbn13": "9780544854444"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/Whole30-Cookbook-Delicious-Totally-Compliant/dp/0544854411?tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=THE+WHOLE30+COOKBOOK&author=Melissa+Hartwig"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780544854413"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BWHOLE30%252BCOOKBOOK%252FMelissa%252BHartwig%252F9780544854413&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BWHOLE30%252BCOOKBOOK%252BMelissa%252BHartwig"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780544854413&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DTHE%2BWHOLE30%2BCOOKBOOK"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780544854413%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BWHOLE30%2BCOOKBOOK%2BMelissa%2BHartwig%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/8edf400b-3809-5180-900c-048081038eea",
+      "userID": 2,
+      "id": 8
+    },
+    {
+      "rank": 8,
+      "rank_last_week": 0,
+      "weeks_on_list": 1,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "052553976X",
+      "primary_isbn13": "9780525539766",
+      "publisher": "Putnam",
+      "description": "Three people involved in a love triangle find everything they hold dear is tested as Mussolini’s power grows and laws change in Rome.",
+      "price": "0.00",
+      "title": "ETERNAL",
+      "author": "Lisa Scottoline",
+      "contributor": "by Lisa Scottoline",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9780525539766.jpg",
+      "book_image_width": 331,
+      "book_image_height": 500,
+      "amazon_product_url": "https://www.amazon.com/dp/052553976X?tag=NYTBSREV-20&tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "052553976X",
+          "isbn13": "9780525539766"
+        },
+        {
+          "isbn10": "0525539778",
+          "isbn13": "9780525539773"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/dp/052553976X?tag=NYTBSREV-20&tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=ETERNAL&author=Lisa+Scottoline"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780525539766"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FETERNAL%252FLisa%252BScottoline%252F9780525539766&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DETERNAL%252BLisa%252BScottoline"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780525539766&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DETERNAL"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780525539766%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DETERNAL%2BLisa%2BScottoline%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/1702a646-7ee6-5a72-81bd-2f9692c91619",
+      "userID": 2,
+      "id": 9
+    },
+    {
+      "rank": 2,
+      "rank_last_week": 3,
+      "weeks_on_list": 23,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "0593139135",
+      "primary_isbn13": "9780593139134",
+      "publisher": "Crown",
+      "description": "The Academy Award-winning actor shares snippets from the diaries he kept over the last 35 years.",
+      "price": "0.00",
+      "title": "GREENLIGHTS",
+      "author": "Matthew McConaughey",
+      "contributor": "by Matthew McConaughey",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593139134.jpg",
+      "book_image_width": 392,
+      "book_image_height": 500,
+      "amazon_product_url": "https://www.amazon.com/dp/0593139135?tag=NYTBSREV-20&tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "0593139135",
+          "isbn13": "9780593139134"
+        },
+        {
+          "isbn10": "0593416953",
+          "isbn13": "9780593416952"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/dp/0593139135?tag=NYTBSREV-20&tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=GREENLIGHTS&author=Matthew+McConaughey"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780593139134"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FGREENLIGHTS%252FMatthew%252BMcConaughey%252F9780593139134&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DGREENLIGHTS%252BMatthew%252BMcConaughey"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780593139134&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DGREENLIGHTS"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780593139134%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DGREENLIGHTS%2BMatthew%2BMcConaughey%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/a13e8e1e-0fdd-5551-925b-d89690f4eb37",
+      "userID": 2,
+      "id": 10
+    },
+    {
+      "rank": 2,
+      "rank_last_week": 0,
+      "weeks_on_list": 0,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "0062457713",
+      "primary_isbn13": "9780062457714",
+      "publisher": "HarperOne/HarperCollins",
+      "description": "A blogger argues that we should stop striving to be positive at all times and instead become better at handling adversity.",
+      "price": "0.00",
+      "title": "THE SUBTLE ART OF NOT GIVING A F*CK",
+      "author": "Mark Manson",
+      "contributor": "by Mark Manson",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9780062457714.jpg",
+      "book_image_width": 330,
+      "book_image_height": 495,
+      "amazon_product_url": "http://www.amazon.com/Subtle-Art-Not-Giving-Counterintuitive/dp/0062457713?tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "0062457713",
+          "isbn13": "9780062457714"
+        },
+        {
+          "isbn10": "006245773X",
+          "isbn13": "9780062457738"
+        },
+        {
+          "isbn10": "0062899147",
+          "isbn13": "9780062899149"
+        },
+        {
+          "isbn10": "0062641549",
+          "isbn13": "9780062641540"
+        },
+        {
+          "isbn10": "0062457721",
+          "isbn13": "9780062457721"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "http://www.amazon.com/Subtle-Art-Not-Giving-Counterintuitive/dp/0062457713?tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=THE+SUBTLE+ART+OF+NOT+GIVING+A+F%2ACK&author=Mark+Manson"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780062457714"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BSUBTLE%252BART%252BOF%252BNOT%252BGIVING%252BA%252BF%25252ACK%252FMark%252BManson%252F9780062457714&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BSUBTLE%252BART%252BOF%252BNOT%252BGIVING%252BA%252BF%25252ACK%252BMark%252BManson"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780062457714&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DTHE%2BSUBTLE%2BART%2BOF%2BNOT%2BGIVING%2BA%2BF%252ACK"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780062457714%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BSUBTLE%2BART%2BOF%2BNOT%2BGIVING%2BA%2BF%252ACK%2BMark%2BManson%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/61980bbe-79bd-5824-9412-31c5f07762fd",
+      "userID": 2,
+      "id": 11
     }
   ],
   "reviews": [
