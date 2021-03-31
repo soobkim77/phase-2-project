@@ -9,7 +9,7 @@ class MyUser extends React.Component {
     }
 
     handleChange = () => {
-        this.setState({change: true})
+        this.setState({change: !this.state.change})
     }
 
     render(){
