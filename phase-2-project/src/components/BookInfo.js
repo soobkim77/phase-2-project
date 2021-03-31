@@ -8,7 +8,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 const BookInfo = (props) => {
     return (
-        <Container text>
+        <Container className="ui cards" text>
             <Header>{props.book.title}</Header>
             <Image
             src={props.book.book_image}

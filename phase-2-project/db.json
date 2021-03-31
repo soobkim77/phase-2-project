@@ -41,6 +41,54 @@
       "password": "1234",
       "taste": "hardcover-nonfiction",
       "id": 7
+    },
+    {
+      "username": "asdfasdf",
+      "password": "asdff",
+      "taste": "childrens-middle-grade-e-book",
+      "id": 8
+    },
+    {
+      "username": "",
+      "password": "",
+      "taste": "",
+      "id": 9
+    },
+    {
+      "username": "",
+      "password": "",
+      "taste": "",
+      "id": 10
+    },
+    {
+      "username": "hi",
+      "password": "23453545",
+      "taste": "",
+      "id": 11
+    },
+    {
+      "username": "asdf",
+      "password": "23455",
+      "taste": "",
+      "id": 12
+    },
+    {
+      "username": "newuser",
+      "password": "12345",
+      "taste": "paperback-nonfiction",
+      "id": 13
+    },
+    {
+      "username": "home",
+      "password": "12345",
+      "taste": "",
+      "id": 14
+    },
+    {
+      "username": "sdfg",
+      "password": "234563425",
+      "taste": "young-adult-paperback-monthly",
+      "id": 15
     }
   ],
   "mybooks": [

@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import '../login.css'
+import Background from "../images/login.jpg"
 export default class Register extends Component {
     render() {
         return (
+             
         
             <div className="inner-container">
+            
                 <div className="header">
                 Register
                 </div>
@@ -20,7 +23,7 @@ export default class Register extends Component {
                         name="username"
                         className="login-input"
                         placeholder="Username" 
-                        require="true"/>
+                        required="Required"/>
                     </div>
 
                     <div className="input-group">
@@ -32,7 +35,10 @@ export default class Register extends Component {
                         name="password"
                         className="login-input"
                         placeholder="Password" 
-                        require="true"/>
+                        pattern={[
+                            '^.{4,4}$', // min 8 chars
+                            '(?=.*\\d)' //number required
+                        ]}/>
                     </div>
                     
                 </form>
