@@ -158,6 +158,20 @@ class App extends React.Component {
     this.setState({user: {...this.state.user, password: e.target.value}})
   }
 
+
+  editPref = (e) => {
+    e.preventDefault()
+    fetch(`http://localhost:3000/users/${this.state.user.id}`, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state.user)
+    }).then(r => r.json())
+    .then(res => this.getMyList(res.taste))
+  }
+
+
   createUser = (e) => {
     e.preventDefault()
     let allUsers = this.state.allUsers
@@ -169,7 +183,7 @@ class App extends React.Component {
     fetch('http://localhost:3000/users', {
       method: 'POST',
       headers: {
-        'Content-Type' : 'application/json'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         username: this.state.user.username,
@@ -247,7 +261,7 @@ class App extends React.Component {
           <Route path="/book/:rank" render={() => {
             return <BookInfo user={this.state.user.username} book={this.state.currentBook} add={this.addBook} />}}
             />
-          <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} bookInfo={this.bookInfo} remove={this.removeBook}/>} />
+          <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} pref={this.editPref} taste={this.handleTasteChange} bookInfo={this.bookInfo} lists={this.state.allLists} remove={this.removeBook}/>} />
         </Switch>
     </div>
      
