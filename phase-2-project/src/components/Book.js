@@ -15,7 +15,7 @@ const Book = (props) => {
                 <Link to={`/book/${props.book.title}`} className="ui blue basic button">
                 About this book
                 </Link>
-                {props.added ? <button className="abtBtn" id={props.book.id} onClick={() => props.removeBook(props.book.id)}/> : null}
+                {props.added ? <button className="abtBtn" id={props.book.id} onClick={() => props.remove(props.book.id)}>Remove</button> : null}
             </div>
     </div>
     )
