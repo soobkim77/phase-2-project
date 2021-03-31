@@ -82,6 +82,6 @@ class BookInfo extends React.Component {
                 </div>
             </Container>
     )}
-}
+
 
 export default BookInfo
