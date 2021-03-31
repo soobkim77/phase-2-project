@@ -7,6 +7,7 @@ class Validation extends Component {
     render() {
         return (
             <div className="root-container">
+            <h1 className="title">gitLit</h1>
             <div className="box-controller">
             <div
                 className={"controller " + (this.props.displayLoginBool

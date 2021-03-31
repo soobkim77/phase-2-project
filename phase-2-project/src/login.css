@@ -4,6 +4,11 @@ body,
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    background-image: url(./images/login.jpg);
+    background-size:cover;
+    background-origin: border-box;
+    margin: 0px;
+    background-attachment: fixed;
 }
 
 
@@ -15,6 +20,8 @@ body,
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   
+    
 }
 
 .box-controller {
@@ -29,7 +36,10 @@ body,
     box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
     margin-bottom: 30px;
     align-items: center;
+    justify-content: center;
     transition: visibility 0.5s ease-out;
+    z-index: 1;
+    background-color: white;
 }
 
 .controller {
@@ -54,6 +64,7 @@ body,
     box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
     border-radius: 6px;
     padding: 24px;
+    background-color: white;
 }
 
 .inner-container {

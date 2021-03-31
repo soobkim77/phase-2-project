@@ -9,7 +9,7 @@ const Book = (props) => {
                 <div>
                     <h2 className="title">{props.book.title}</h2>
                     <div><span className='date'>Rank: {props.book.rank}</span></div>
-                    <h2>{props.book.author}</h2>
+                    <h4>{props.book.author}</h4>
                 </div>
                 <p className="description"><span>{props.book.description}</span></p>
                 <Link to={`/book/${props.book.title}`} className="ui blue basic button">
