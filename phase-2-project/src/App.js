@@ -160,7 +160,12 @@ class App extends React.Component {
 
   createUser = (e) => {
     e.preventDefault()
-    
+    let allUsers = this.state.allUsers
+    let duplicateUser = allUsers.find(user => user.username === this.state.user.username)
+    if(duplicateUser){
+      alert('Username Already Exists')
+    }
+    else{
     fetch('http://localhost:3000/users', {
       method: 'POST',
       headers: {
@@ -176,7 +181,8 @@ class App extends React.Component {
       this.setState({isLoggedIn: true})
       let URL = this.state.user.taste.replaceAll("^\"+|\"+$", "")
       this.getMyList(URL)
-  })
+    })
+  }
 }
   
   validateUser = (e) => {
