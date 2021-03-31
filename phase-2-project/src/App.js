@@ -58,6 +58,7 @@ class App extends React.Component {
       this.setState({ currentMy: 0 })
     }
   }
+  
 
 
   addBook = (book) => {
@@ -73,7 +74,6 @@ class App extends React.Component {
       })
       .then(r=>r.json())
       .then(book => {
-        
         this.setState({myBooks: book})
       })
   }
@@ -239,7 +239,7 @@ class App extends React.Component {
             
           </Route>
           <Route path="/book/:rank" render={() => {
-            return <BookInfo book={this.state.currentBook} add={this.addBook} />}}
+            return <BookInfo user={this.state.user.username} book={this.state.currentBook} add={this.addBook} />}}
             />
           <Route path='/user' render={() => <MyUser myBooks={this.state.myBooks} bookInfo={this.bookInfo} remove={this.removeBook}/>} />
         </Switch>
