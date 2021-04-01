@@ -4,6 +4,7 @@ html {
   text-align: center;
   font-size: 40px;
   font-family: Ubuntu, sans-serif;
+  padding-top: 40px;
 }
 
 .App {
@@ -25,11 +26,14 @@ html {
   background-color: white;
   margin: 0px;
   height: 40px;
-  
 }
 
 .navLinks {
 
+}
+
+.logOutLink{
+  
 }
 
 .navLogo{
@@ -49,12 +53,49 @@ html {
 
 .navBtn:hover,
 .navBtn:focus {
-  
   color: black;
 } 
 
-.genreBarContainer {
+.genreBar{
+  display: grid;
+  /* grid-template-columns: 9fr 1fr; */
+  grid-template-rows: auto;
+}
+.genreBar h1 {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  border: black solid 1px;
+  
+}
 
+.genreBarGrid{
+  display: grid;
+  grid-template-columns: 18fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.moreButton{
+  font-size: 35px;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  color: white;
+  display:inline;
+  flex-direction: column;
+  justify-content: center;
+  height: 10%;
+  width:75%;
+  padding: 10px;
+  
+}
+
+.moreButton:hover,
+.moreButton:focus {
+  font-size: 35px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  outline: none;
 }
 
 .bookContainer {
@@ -65,29 +106,12 @@ html {
   width: 100%
 }
 
-/* .bookCard {
-  position: relative;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  width: 230px;
-  height: 390px;
-  box-shadow: 0 0 20px #aaa;
-  margin: 0px;
-  padding: 10px 10px 0px 10px;
-  vertical-align: top;
-  transition: height 1s;
-  background-color: rgba(0, 0, 0, 0.7)
-  
-} */
 
 .bookCard {
-  
   width: 230px;
   height: 390px;
   display: grid;
   grid-template-rows: 80% 20%;
-
   box-shadow: 0 0 20px #aaa;
   margin: 10px;
   padding: 10px 10px 0px 10px;
