@@ -6,6 +6,7 @@ const NavBar = props => {
         <div className="navLinks">
             <Link to="/books" className="navBtn">home</Link>
             <Link to="/user" className="navBtn">my page</Link>
+            <Link to="/" className="navBtn" onClick={() => props.logout()} >LogOut</Link>
         </div>
         <div className="navLogo">
             <h1>gitLit</h1>
