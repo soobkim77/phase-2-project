@@ -142,6 +142,15 @@ class App extends React.Component {
     this.setState({user: {...this.state.user, taste: e.target.value}})
   }
 
+  handleLogOut = () => {
+    this.setState({isLoggedIn: false, user: {
+      username: "",
+      password: "",
+      taste: "",
+      id: ""
+    }})
+  }
+
   addBook = (book) => {
       let update = [...this.state.myBooks]
       book.userID = this.state.user.id
@@ -238,7 +247,7 @@ class App extends React.Component {
     return (
       <div>
         
-        {this.state.isLoggedIn ? <NavBar /> : null}
+        {this.state.isLoggedIn ? <NavBar logout={this.handleLogOut} /> : null}
         <Switch>
           <Route path="/books" render={() => <Home  fList={this.fiveFBooks()} nList={this.fiveNBooks()} moreF={this.moreFBooks} moreN={this.moreNBooks} click={this.bookInfo} myList={this.fiveMyBooks()} moreMy={this.moreMyBooks} header={this.state.user.taste} />}/>
           <Route exact path="/" render={()=> {
