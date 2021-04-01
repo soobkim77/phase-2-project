@@ -6,6 +6,7 @@ import './login.css';
 import Validation from './Pages/Validation';
 import NavBar from './components/NavBar';
 import MyUser from './Pages/MyUser'
+import './App.css'
 
 
 
@@ -205,6 +206,8 @@ class App extends React.Component {
       this.setState({isLoggedIn: true})
       let URL = this.state.user.taste.replaceAll("^\"+|\"+$", "")
       this.getMyList(URL)
+      this.getFiction()
+      this.getNonFiction()
       })
     }
   }
