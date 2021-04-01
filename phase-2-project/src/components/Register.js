@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../login.css'
-import Background from "../images/login.jpg"
 export default class Register extends Component {
     render() {
         const isEnabled = this.props.user.username.length > 0 && this.props.user.password.length > 3 && this.props.user.password.length < 5 && this.props.user.taste.length > 0
