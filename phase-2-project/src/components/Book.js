@@ -21,7 +21,6 @@ const Book = (props) => {
                 className="abtBtn" 
                 id={props.book.id} 
                 onClick={() => props.removeBook(props.book.id)}/> : null}
-            
     </div>
     )
 }
