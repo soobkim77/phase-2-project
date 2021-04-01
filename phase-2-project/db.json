@@ -515,6 +515,134 @@
       "book_uri": "nyt://book/61980bbe-79bd-5824-9412-31c5f07762fd",
       "userID": 2,
       "id": 11
+    },
+    {
+      "rank": 3,
+      "rank_last_week": 0,
+      "weeks_on_list": 1,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "0062868039",
+      "primary_isbn13": "9780062868039",
+      "publisher": "Harper",
+      "description": "The 16th book in the Maisie Dobbs series. As Nazi occupation increases, Maisie looks into a possible murder that might affect Britain’s war efforts.",
+      "price": "0.00",
+      "title": "THE CONSEQUENCES OF FEAR",
+      "author": "Jacqueline Winspear",
+      "contributor": "by Jacqueline Winspear",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9780062868022.jpg",
+      "book_image_width": 341,
+      "book_image_height": 500,
+      "amazon_product_url": "https://www.amazon.com/dp/0062868020?tag=NYTBSREV-20&tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "0062868020",
+          "isbn13": "9780062868022"
+        },
+        {
+          "isbn10": "0062868039",
+          "isbn13": "9780062868039"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/dp/0062868020?tag=NYTBSREV-20&tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=THE+CONSEQUENCES+OF+FEAR&author=Jacqueline+Winspear"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780062868039"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BCONSEQUENCES%252BOF%252BFEAR%252FJacqueline%252BWinspear%252F9780062868039&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BCONSEQUENCES%252BOF%252BFEAR%252BJacqueline%252BWinspear"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780062868039&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DTHE%2BCONSEQUENCES%2BOF%2BFEAR"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780062868039%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BCONSEQUENCES%2BOF%2BFEAR%2BJacqueline%2BWinspear%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/837b6504-1011-5dda-aef2-c32b80bde080",
+      "userID": 1,
+      "id": 12
+    },
+    {
+      "rank": 3,
+      "rank_last_week": 0,
+      "weeks_on_list": 1,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "0062868039",
+      "primary_isbn13": "9780062868039",
+      "publisher": "Harper",
+      "description": "The 16th book in the Maisie Dobbs series. As Nazi occupation increases, Maisie looks into a possible murder that might affect Britain’s war efforts.",
+      "price": "0.00",
+      "title": "THE CONSEQUENCES OF FEAR",
+      "author": "Jacqueline Winspear",
+      "contributor": "by Jacqueline Winspear",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9780062868022.jpg",
+      "book_image_width": 341,
+      "book_image_height": 500,
+      "amazon_product_url": "https://www.amazon.com/dp/0062868020?tag=NYTBSREV-20&tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "0062868020",
+          "isbn13": "9780062868022"
+        },
+        {
+          "isbn10": "0062868039",
+          "isbn13": "9780062868039"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/dp/0062868020?tag=NYTBSREV-20&tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=THE+CONSEQUENCES+OF+FEAR&author=Jacqueline+Winspear"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780062868039"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BCONSEQUENCES%252BOF%252BFEAR%252FJacqueline%252BWinspear%252F9780062868039&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BCONSEQUENCES%252BOF%252BFEAR%252BJacqueline%252BWinspear"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780062868039&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DTHE%2BCONSEQUENCES%2BOF%2BFEAR"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780062868039%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BCONSEQUENCES%2BOF%2BFEAR%2BJacqueline%2BWinspear%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/837b6504-1011-5dda-aef2-c32b80bde080",
+      "userID": 1,
+      "id": 13
     }
   ],
   "reviews": [
