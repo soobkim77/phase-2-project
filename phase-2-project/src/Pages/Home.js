@@ -7,19 +7,19 @@ class Home extends Component {
         return (
             <div className="genreBarContainer" >
                 <div className="genreBar">
-                    <h1>Fiction Bestsellers</h1>
+                    <h1>fiction bestsellers</h1>
                     <GenreContainer List={this.props.fList} more={this.props.moreF} click={this.props.click} />
                 </div>
                 <br/>
                 <br/>
                 <div className="genreBar">
-                    <h1>Non-Fiction Bestsellers</h1>
+                    <h1>non-fiction bestsellers</h1>
                     <GenreContainer List={this.props.nList} more={this.props.moreN} click={this.props.click} />
                 </div>
                 <br/>
                 <br/>
                 <div className="genreBar">
-                    <h1>My Recommendations</h1>
+                    <h1>my suggestions</h1>
                     <GenreContainer List={this.props.myList} more={this.props.moreMy} click={this.props.click} />
                 </div>
            </div> 

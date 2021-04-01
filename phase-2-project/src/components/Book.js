@@ -16,11 +16,23 @@ const Book = (props) => {
         {/* <p className='date'>Rank: {props.book.rank}</p>  */}
               
             {/* <p className="description"><span>{props.book.description}</span></p> */}
-            <Link to={`/book/${props.book.title}`} className="amzBtn">about</Link>
-            {props.added ? <button 
-                className="abtBtn" 
-                id={props.book.id} 
-                onClick={() => props.removeBook(props.book.id)}/> : null}
+        <div className="lowerBoxContainer">
+            <div className="rankBox">
+                <div>
+                    <p>rank</p>
+                </div>
+                <div>
+                    <p className="chartPosition">{props.book.rank}</p>
+                </div>
+            </div>
+           <div className="buttonBox">
+                <Link to={`/book/${props.book.title}`} className="abtBtn">more info</Link>
+                {props.added ? <button 
+                    className="btn" 
+                    id={props.book.id} 
+                    onClick={() => props.remove(props.book.id)}/> : null}
+            </div> 
+        </div>
     </div>
     )
 }

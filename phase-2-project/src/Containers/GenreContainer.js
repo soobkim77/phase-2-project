@@ -13,7 +13,7 @@ const GenreContainer = (props) => {
        
             </div>
             <button onClick={props.more} className="moreButton">
-                More Books!
+                more books!
             </button>
         </div>
     )
