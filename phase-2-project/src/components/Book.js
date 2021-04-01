@@ -3,20 +3,24 @@ import{Link} from 'react-router-dom';
 
 const Book = (props) => {
     return(
-    <div className="bookCard">
-            <div className="" onClick={() => props.click(props.book)}>
-                <img className="bookImage" src={props.book.book_image}  />
-                <div>
-                    <h2 className="title">{props.book.title}</h2>
-                    <div><span className='date'>Rank: {props.book.rank}</span></div>
-                    <h4>{props.book.author}</h4>
-                </div>
-                <p className="description"><span>{props.book.description}</span></p>
-                <Link to={`/book/${props.book.title}`} className="ui blue basic button">
-                About this book
-                </Link>
-                {props.added ? <button className="abtBtn" id={props.book.id} onClick={() => props.remove(props.book.id)}>Remove</button> : null}
-            </div>
+    <div className="bookCard" onClick={() => props.click(props.book)}>
+            
+         <div className="cover">      
+            <img className="bookImage" src={props.book.book_image}  />
+            {/* <p className="hoverInfo">{props.book.description}</p> */}
+        </div>     
+        {/* <div className="description">   
+            <p className="title">{props.book.title}<br/>
+                <span className="author"></span>{props.book.author}</p>
+            </div> */}
+        {/* <p className='date'>Rank: {props.book.rank}</p>  */}
+              
+            {/* <p className="description"><span>{props.book.description}</span></p> */}
+            <Link to={`/book/${props.book.title}`} className="amzBtn">about</Link>
+            {props.added ? <button 
+                className="abtBtn" 
+                id={props.book.id} 
+                onClick={() => props.removeBook(props.book.id)}/> : null}
     </div>
     )
 }
