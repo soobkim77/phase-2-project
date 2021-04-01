@@ -318,3 +318,34 @@ html {
   color:black;
   outline: none;
 }
+
+.userAbtBtn {
+  display:inline-flex;
+   width: 60%;
+   height: 100%;
+   background: #4E9CAF;
+   text-align: center;
+   justify-content: space-around;
+   align-items:center ;
+   color: white;
+   font-weight: bold;
+}
+
+.userRmvBtn {
+  display:inline-flex;
+   width: 20%;
+   height: 100%;
+   background: #4E9CAF;
+   z-index: 2;
+   text-align: center;
+   justify-content: space-around;
+   align-items:center ;
+   color: white;
+   font-weight: bold;
+}
+
+.userBookContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

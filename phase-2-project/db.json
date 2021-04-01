@@ -861,6 +861,142 @@
       "book_uri": "nyt://book/60a781f8-c285-5772-b534-7f807fe9fd09",
       "userID": 1,
       "id": 16
+    },
+    {
+      "rank": 2,
+      "rank_last_week": 1,
+      "weeks_on_list": 2,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "1538748215",
+      "primary_isbn13": "9781538748213",
+      "publisher": "Grand Central",
+      "description": "Windsor Horne Lockwood III might rectify cold cases connected to his family that have eluded the F.B.I. for decades.",
+      "price": "0.00",
+      "title": "WIN",
+      "author": "Harlan Coben",
+      "contributor": "by Harlan Coben",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9781538748213.jpg",
+      "book_image_width": 331,
+      "book_image_height": 500,
+      "amazon_product_url": "https://www.amazon.com/dp/1538748215?tag=NYTBSREV-20&tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "1538748215",
+          "isbn13": "9781538748213"
+        },
+        {
+          "isbn10": "1538706415",
+          "isbn13": "9781538706411"
+        },
+        {
+          "isbn10": "1538704234",
+          "isbn13": "9781538704233"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/dp/1538748215?tag=NYTBSREV-20&tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=WIN&author=Harlan+Coben"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9781538748213"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FWIN%252FHarlan%252BCoben%252F9781538748213&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DWIN%252BHarlan%252BCoben"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9781538748213&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DWIN"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9781538748213%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DWIN%2BHarlan%2BCoben%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/d951431e-6185-5e2f-bd58-8063d43cc5b2",
+      "userID": 2,
+      "id": 17
+    },
+    {
+      "rank": 5,
+      "rank_last_week": 0,
+      "weeks_on_list": 0,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "1476733503",
+      "primary_isbn13": "9781476733500",
+      "publisher": "Scribner",
+      "description": "An overview of the history and science of genetics by the Pulitzer Prize-winning author of “The Emperor of All Maladies.”",
+      "price": "0.00",
+      "title": "THE GENE",
+      "author": "Siddhartha Mukherjee",
+      "contributor": "by Siddhartha Mukherjee",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9781476733531.jpg",
+      "book_image_width": 326,
+      "book_image_height": 495,
+      "amazon_product_url": "http://www.amazon.com/Gene-Intimate-History-Siddhartha-Mukherjee-ebook/dp/B017I25DCC?tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "https://www.nytimes.com/2016/05/15/books/review/the-gene-by-siddhartha-mukherjee.html",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "1476733503",
+          "isbn13": "9781476733500"
+        },
+        {
+          "isbn10": "1476733538",
+          "isbn13": "9781476733531"
+        },
+        {
+          "isbn10": "147673352X",
+          "isbn13": "9781476733524"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "http://www.amazon.com/Gene-Intimate-History-Siddhartha-Mukherjee-ebook/dp/B017I25DCC?tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=THE+GENE&author=Siddhartha+Mukherjee"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9781476733500"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BGENE%252FSiddhartha%252BMukherjee%252F9781476733500&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BGENE%252BSiddhartha%252BMukherjee"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9781476733500&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DTHE%2BGENE"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9781476733500%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BGENE%2BSiddhartha%2BMukherjee%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/99f11e87-6e03-58b6-98fb-b6283f3c9deb",
+      "userID": 2,
+      "id": 18
     }
   ],
   "reviews": [

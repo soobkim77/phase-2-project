@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
     Container,
     Header,
@@ -17,8 +16,7 @@ class BookInfo extends React.Component {
     state={
         showReview: false,
         review: "",
-        bookReviews: [],
-        reviewButton: true 
+        bookReviews: []
     }
 
     componentDidMount = () => {
@@ -59,10 +57,6 @@ class BookInfo extends React.Component {
             <div className="highlightContainer" >
                 <div className="highlightLeft">
                     <img src={this.props.book.book_image}  />
-                    
-                    
-                    
-                    
                 </div>
                 <div className="highlightRight">
                     <div>

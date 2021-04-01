@@ -18,10 +18,10 @@ const Book = (props) => {
                     <p className="chartPosition">{props.book.rank}</p>
                 </div>
             </div>
-           <div className="buttonBox">
-                <Link to={`/book/${props.book.title}`} className="abtBtn">more info</Link>
+            <div className="buttonBox">
+                <Link to={`/book/${props.book.title}`} className={`${props.added ? 'userAbtBtn' : 'abtBtn' }`} >more info</Link>
                 {props.added ? <button 
-                    className="btn" 
+                    className="userRmvBtn" 
                     id={props.book.id} 
                     onClick={() => props.remove(props.book.id)}>x</button> : null}
             </div> 
