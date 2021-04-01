@@ -4,7 +4,7 @@ import '../App.css'
 
 const GenreContainer = (props) => {
     return (
-        <div>
+        <div className="genreBarGrid">
             <div className="bookContainer">
                 
                     {props.List.map(book => { 
@@ -12,9 +12,7 @@ const GenreContainer = (props) => {
                     })}
        
             </div>
-            <button onClick={props.more} className="moreButton">
-                more books!
-            </button>
+            <button onClick={props.more} className="moreButton">➵</button>
         </div>
     )
 }

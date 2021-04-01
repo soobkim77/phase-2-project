@@ -7,15 +7,7 @@ const Book = (props) => {
             
          <div className="cover">      
             <img className="bookImage" src={props.book.book_image}  />
-            {/* <p className="hoverInfo">{props.book.description}</p> */}
-        </div>     
-        {/* <div className="description">   
-            <p className="title">{props.book.title}<br/>
-                <span className="author"></span>{props.book.author}</p>
-            </div> */}
-        {/* <p className='date'>Rank: {props.book.rank}</p>  */}
-              
-            {/* <p className="description"><span>{props.book.description}</span></p> */}
+          </div>
         <div className="lowerBoxContainer">
             <div className="rankBox">
                 <div>
@@ -30,7 +22,7 @@ const Book = (props) => {
                 {props.added ? <button 
                     className="btn" 
                     id={props.book.id} 
-                    onClick={() => props.remove(props.book.id)}/> : null}
+                    onClick={() => props.remove(props.book.id)}>x</button> : null}
             </div> 
         </div>
     </div>
