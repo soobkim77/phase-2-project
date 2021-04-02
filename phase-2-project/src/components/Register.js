@@ -23,6 +23,7 @@ export default class Register extends Component {
                         onChange={this.props.handleUsernameChange}
                         name="username"
                         className="login-input"
+                        autoComplete="off"
                         />
                     </div>
 
