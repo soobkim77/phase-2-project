@@ -2,40 +2,66 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## The Journey 
- “AND I KNEW EXACTLY WHAT TO DO. BUT IN A MUCH MORE REAL SENSE, I HAD NO IDEA WHAT TO DO.” -Michael Scott
+## The Journey
 
- Although reading is a quintessential part of the human experience, it is often neglected. Many may wonder why. Research from the Pew Research Center in 2019 has indicated that 27% of Americans have not read a book in the last year. Co-Developer Evan and I found ourselves as part of this category, but we did identify that we both believed that reading is important enough that we needed to adopt it.
+“AND I KNEW EXACTLY WHAT TO DO. BUT IN A MUCH MORE REAL SENSE, I HAD NO IDEA WHAT TO DO.” -Michael Scott
 
- This became the basis for our project. gitLit was designed as the first step for those who wish to finally become more complete humans. It seeks to solve one of the largest hurdles known to man. 
+Although reading is a quintessential part of the human experience, it is often neglected. Many may wonder why. Research from the Pew Research Center in 2019 has indicated that 27% of Americans have not read a book in the last year. Co-Developer Evan and I found ourselves as part of this category, but we did identify that we both believed that reading is important enough that we needed to adopt it.
 
- ## What do I read?
- This pivotal question is often one of the easiest excuses for neglecting to read. If I don't even know where to start, why bother starting?
+This became the basis for our project. gitLit was designed as the first step for those who wish to finally become more complete humans. It seeks to solve one of the largest hurdles known to man.
 
- ### API
- One of the easiest ways for an individual to find out what to read, eat, or watch, is by listening to someone who knows what they're talking about. The [New York Times](https://www.nytimes.com/books/best-sellers/) has a compendium of lists that are created as recommendations for readers. They formulated an API that contains the same data as their site, which we have used to create an app that is more personalized. To access their API, you can follow this [link](https://developer.nytimes.com/) to sign up as a developer.
+## What do I read?
 
- ## User Experience
- gitLit focuses on providing a user with personalized experience. There are two critical factors for providing a catered experience. Developing a reader profile, as well as engaging in a reading community. 
+This pivotal question is often one of the easiest excuses for neglecting to read. If I don't even know where to start, why bother starting?
 
- ### Reading Profile
- In order to access our application, a reader must log in to an account. If they are a new user, they will be able to create an account, and set a preference for a genre.
+### API
 
- #### User Creation and Validation
- Users are able to create new accounts from the registration tab. This tab uses a controlled form to take in inputs for usernames and passwords. Users may then select a preference from the entire list of NYT Bestsellers. The input fields on the form are also cross-referenced with our database of users to ensure there is no duplicate users. Passwords are controlled in that the exact length of the password must be 4 digits long. Any errors will prevent registration and prompt the user to correct them. The changes on the form are logged in the state of APP as a user object. This state is then used as the body of a POST request to post a new user to the db.json. 
+One of the easiest ways for an individual to find out what to read, eat, or watch, is by listening to someone who knows what they're talking about. The [New York Times](https://www.nytimes.com/books/best-sellers/) has a compendium of lists that are created as recommendations for readers. They formulated an API that contains the same data as their site, which we have used to create an app that is more personalized. To access their API, you can follow this [link](https://developer.nytimes.com/) to sign up as a developer.
 
- The login page consists of a form for usernames and password. These are then cross-referenced from a list of all users to find a patching user object. If the username and password return a matched object from a filter method, then a succesful login is made. This changes the internal state of isLoggedIn to true. This will redirect the user to the actual web applications content, tailored to the individual's user data. 
+## User Experience
 
-#### Home  
-The Home page of this application contains a section for Fiction and Non-Fiction best sellers. The reason that these two lists were included by default, was based on the fact that an individual who is just starting to build their reading preferences, can easily access a variety of books that fit under these two categories. As the reader develops this profile, or if they already have a reading identity, they can also select a preference upon registration, that generates as a third list. 
+gitLit focuses on providing a user with personalized experience. There are two critical factors for providing a catered experience. Developing a reader profile, as well as engaging in a reading community.
+
+### Reading Profile
+
+In order to access our application, a reader must log in to an account. If they are a new user, they will be able to create an account, and set a preference for a genre.
+
+#### User Creation and Validation
+
+Users are able to create new accounts from the registration tab. This tab uses a controlled form to take in inputs for usernames and passwords. Users may then select a preference from the entire list of NYT Bestsellers. The input fields on the form are also cross-referenced with our database of users to ensure there is no duplicate users. Passwords are controlled in that the exact length of the password must be 4 digits long. Any errors will prevent registration and prompt the user to correct them. The changes on the form are logged in the state of APP as a user object. This state is then used as the body of a POST request to post a new user to the db.json.
+
+![Sample Register](./images/gitLit-register.gif)
+
+> gitLit Sample Registration Process
+
+The login page consists of a form for usernames and password. These are then cross-referenced from a list of all users to find a patching user object. If the username and password return a matched object from a filter method, then a succesful login is made. This changes the internal state of isLoggedIn to true. This will redirect the user to the actual web applications content, tailored to the individual's user data.
+
+![Sample Login](./images/gitLitLogin.gif)
+
+> gitLit Sample Login Process
+
+#### Home
+
+The Home page of this application contains a section for Fiction and Non-Fiction best sellers. The reason that these two lists were included by default, was based on the fact that an individual who is just starting to build their reading preferences, can easily access a variety of books that fit under these two categories. As the reader develops this profile, or if they already have a reading identity, they can also select a preference upon registration, that generates as a third list.
+
+![Sample Home](./images/gitLitHome.gif)
+
+> User Interaction with Home Page
 
 #### Lists
-The NYT API lists contain 15 books, ranked 1-15, but our app displays only 5 of each list at a time. You can scroll through the list by pressing the button located on the right of each container. The list is spliced into an array of 5 by passing an invoked function into the component. The function splices the list into 5 elements and uses an index that increases and loops by 5 upon clicking the arrow button in the container. This allows you to see information on each book and if one piques your interest, the about button will take you to a new page with a more in-depth look at each book. Each container is populated by mapping over the data from the Books API. We store the book lists in their own states, allowing us to pass those down as a prop to be mapped over. The user's recommendation list is generated by taking the encoded version of the user's preference. This value is passed into a get request as a parameter to fetch the corresponding list. 
+
+The NYT API lists contain 15 books, ranked 1-15, but our app displays only 5 of each list at a time. You can scroll through the list by pressing the button located on the right of each container. The list is spliced into an array of 5 by passing an invoked function into the component. The function splices the list into 5 elements and uses an index that increases and loops by 5 upon clicking the arrow button in the container. This allows you to see information on each book and if one piques your interest, the about button will take you to a new page with a more in-depth look at each book. Each container is populated by mapping over the data from the Books API. We store the book lists in their own states, allowing us to pass those down as a prop to be mapped over. The user's recommendation list is generated by taking the encoded version of the user's preference. This value is passed into a get request as a parameter to fetch the corresponding list.
 
 ##### Book Information
-The book information page was created to provide a reader a pathway to actually reading the book. There are 3 core functions that exist on the book information page. The first, is to add a book to a user's profile. We call this, the Wishlist. The second links to buy a book. Simply adding a book to your profile is not always enough, but a link to directly buy a book leaves few reasons to not obtain the book. The third part, is the ability to add a review that can be viewed by other users. 
 
-When the about button is clicked, it will load a new route, with the title of the book as the endpoint. This will also pass the clicked book's information into a new component, BookInfo, that renders a page with the books information displayed. We use the basic book data to fill out general information, as well as generating a link to navigate to external pages to buy the book. We also take in data from our reviews database and generate a list of reviews for the specific book. 
+The book information page was created to provide a reader a pathway to actually reading the book. There are 3 core functions that exist on the book information page. The first, is to add a book to a user's profile. We call this, the Wishlist. The second links to buy a book. Simply adding a book to your profile is not always enough, but a link to directly buy a book leaves few reasons to not obtain the book. The third part, is the ability to add a review that can be viewed by other users.
+
+When the about button is clicked, it will load a new route, with the title of the book as the endpoint. This will also pass the clicked book's information into a new component, BookInfo, that renders a page with the books information displayed. We use the basic book data to fill out general information, as well as generating a link to navigate to external pages to buy the book. We also take in data from our reviews database and generate a list of reviews for the specific book.
+
+![Demo](./images/gitLitDemo.gif)
+
+> User Interaction with Book Info and My Page
 
 #### Community Engagement
-A core feature of our application is in the community experience. Reviews are a tool that can help supplement a reader's decision making when it comes to a book. If all the reviews are negative, then it's likely that a user would shy away from adding the book to their list. gitLit is useful for engaging in a mini-book club without ever leaving your home. We also have added a button that will render and input field for a user to leave their own review. This is then posted to our data base and re-rendered on the page. 
+
+A core feature of our application is in the community experience. Reviews are a tool that can help supplement a reader's decision making when it comes to a book. If all the reviews are negative, then it's likely that a user would shy away from adding the book to their list. gitLit is useful for engaging in a mini-book club without ever leaving your home. We also have added a button that will render and input field for a user to leave their own review. This is then posted to our data base and re-rendered on the page.
