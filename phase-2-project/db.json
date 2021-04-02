@@ -9,7 +9,7 @@
     {
       "username": "soob",
       "password": "1234",
-      "taste": "health",
+      "taste": "animals",
       "id": 2
     },
     {
@@ -997,6 +997,70 @@
       "book_uri": "nyt://book/99f11e87-6e03-58b6-98fb-b6283f3c9deb",
       "userID": 2,
       "id": 18
+    },
+    {
+      "rank": 2,
+      "rank_last_week": 3,
+      "weeks_on_list": 23,
+      "asterisk": 0,
+      "dagger": 0,
+      "primary_isbn10": "0593139135",
+      "primary_isbn13": "9780593139134",
+      "publisher": "Crown",
+      "description": "The Academy Award-winning actor shares snippets from the diaries he kept over the last 35 years.",
+      "price": "0.00",
+      "title": "GREENLIGHTS",
+      "author": "Matthew McConaughey",
+      "contributor": "by Matthew McConaughey",
+      "contributor_note": "",
+      "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593139134.jpg",
+      "book_image_width": 392,
+      "book_image_height": 500,
+      "amazon_product_url": "https://www.amazon.com/dp/0593139135?tag=NYTBSREV-20&tag=NYTBSREV-20",
+      "age_group": "",
+      "book_review_link": "",
+      "first_chapter_link": "",
+      "sunday_review_link": "",
+      "article_chapter_link": "",
+      "isbns": [
+        {
+          "isbn10": "0593139135",
+          "isbn13": "9780593139134"
+        },
+        {
+          "isbn10": "0593416953",
+          "isbn13": "9780593416952"
+        }
+      ],
+      "buy_links": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/dp/0593139135?tag=NYTBSREV-20&tag=NYTBSREV-20"
+        },
+        {
+          "name": "Apple Books",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/buy?title=GREENLIGHTS&author=Matthew+McConaughey"
+        },
+        {
+          "name": "Barnes and Noble",
+          "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780593139134"
+        },
+        {
+          "name": "Books-A-Million",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FGREENLIGHTS%252FMatthew%252BMcConaughey%252F9780593139134&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DGREENLIGHTS%252BMatthew%252BMcConaughey"
+        },
+        {
+          "name": "Bookshop",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780593139134&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Fkeywords%3DGREENLIGHTS"
+        },
+        {
+          "name": "IndieBound",
+          "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780593139134%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DGREENLIGHTS%2BMatthew%2BMcConaughey%26aff%3DNYT"
+        }
+      ],
+      "book_uri": "nyt://book/a13e8e1e-0fdd-5551-925b-d89690f4eb37",
+      "userID": 23,
+      "id": 19
     }
   ],
   "reviews": [

@@ -35,6 +35,7 @@ export default class LogIn extends React.Component {
                             name="password"
                             className="login-input"
                             placeholder="Password"
+                            autoComplete="off"
                             />
                     </div>
 

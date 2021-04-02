@@ -35,6 +35,7 @@ export default class Register extends Component {
                         name="password"
                         className="login-input"
                         placeholder="Password" 
+                        autoComplete="off"
                         />
                     </div>
                     
